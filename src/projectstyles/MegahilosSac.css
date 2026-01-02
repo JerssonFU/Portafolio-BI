@@ -1,0 +1,27 @@
+.mh-screen-full {
+  min-height: 100vh;
+  padding: 80px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mh-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.mh-split.reverse {
+  flex-direction: row-reverse;
+}
+
+.mh-text {
+  max-width: 600px;
+}
+
+.mh-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}

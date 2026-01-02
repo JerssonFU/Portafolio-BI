@@ -1,0 +1,256 @@
+/* Botón volver para páginas de planes */
+.navbar-back-btn {
+  color: white;
+  background: black;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 2px solid white;
+  margin-left: 10px; /* separación del borde izquierdo */
+}
+
+.navbar-back-btn:hover {
+  background: #222;
+}
+
+
+
+
+
+
+
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  
+}
+
+/* Logo */
+.navbar-left .navbar-brand {
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Menú normal */
+.navbar-right {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-link {
+  font-size: 16px;
+  color: #fff;
+  background: none;
+  border: none;
+  text-decoration: none;
+  padding: 6px 12px;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #555;
+}
+
+/* Hamburguesa oculta en desktop */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================== */
+/* ====== OCULTAR ELEMENTOS MÓVILES EN DESKTOP ========= */
+/* ===================================================== */
+
+/* Ocultar siempre la X por defecto en cualquier tamaño */
+.close-btn {
+  display: none !important;
+}
+
+/* Ocultar cabecera del menú móvil en escritorio */
+.menu-header {
+  display: none;
+}
+
+.menu-icon-header {
+  display: none;
+}
+
+/* Ocultar ICONOS del menú en escritorio */
+.menu-icon {
+  display: none;
+}
+
+
+
+/* ============================= */
+/* ========    RESPONSIVE PAGEWITHNAVBAR   ==== */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* Navbar más angosto SOLO en móvil */
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 55px;
+    align-items: center;
+  }
+
+  .navbar-left .navbar-brand {
+  margin-left: -16rem !important;   /* Acerca el texto sin mover la hamburguesa */
+}
+
+  /* Hamburguesa más cerca del título */
+  .navbar .menu-toggle {
+    display: flex;
+    order: 1;
+    margin-right: 0.25rem !important;
+  }
+
+  /* Acercar el texto "Mi Portafolio" */
+  .navbar .navbar-left {
+    order: 2;
+    margin-left: 0.2rem !important;
+  }
+
+  /* Menú lateral */
+  .navbar-right {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;                /* ← antes 80%, ahora más compacto */
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    gap: 26px;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    z-index: 999;
+    display: flex;
+  }
+
+  .navbar-right.open {
+    transform: translateX(0);
+  }
+
+  /* Íconos móviles */
+  .menu-icon {
+    display: inline-block;
+    font-size: 22px;
+    margin-right: 12px;
+  }
+
+  .menu-icon-header {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  /* Cabecera del menú */
+  .menu-header {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .menu-line {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
+    margin: 0;
+  }
+
+  /* Links de menú */
+  .navbar-link {
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    letter-spacing: 2px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  /* Botón X */
+  .navbar-right.open .close-btn {
+    display: block !important;
+    background: none;
+    color: white;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+
+
+/* ===================== */
+/* 📱 MÓVIL PROYECTOS */
+/* ===================== */
+
+@media (max-width: 768px) {
+  .project-mode {
+    padding: 0 1rem;
+    min-height: 58px;
+  }
+
+  /* 👉 hamburguesa un poco más a la derecha */
+  .project-mode .menu-toggle {
+    margin-left: 1rem;
+    margin-right: 0;
+  }
+
+  /* 👉 botón Volver un poco más a la izquierda */
+  .project-mode .navbar-back-btn {
+    margin-left: 0;
+    margin-right: 11rem;
+  }
+}
+

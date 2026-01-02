@@ -1,0 +1,404 @@
+
+/* Aplicar la fuente a toda la página */
+body {
+  font-family: 'Poppins', 'Merriweather', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url('/assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+/* SOLO cuando .home-container está presente, bloquear scroll global */
+body:has(.home-container), html:has(.home-container) {
+  overflow: hidden;
+}
+
+
+/* Contenedor de texto (título y descripción) */
+.text-container {
+  text-align: center;         /* Centrado del texto */
+  margin-bottom: 30px;        /* Espacio entre el texto y los botones */
+}
+
+/* Estilo para el título principal */
+.main-title {
+  font-size: 42px; /* Más grande y llamativo */
+  font-weight: 700; /* Negrita */
+  color: #003366; /* Azul oscuro profesional */
+  text-transform: uppercase; /* Mayúsculas para dar más presencia */
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Título secundario más grande */
+.sub-title {
+  font-size: 48px;            /* Título más grande */
+  font-weight: bold;
+  color: rgb(13, 14, 15);   /* Color negro para el sub-título */
+  margin-bottom: 20px;        /* Espacio debajo del sub-título */
+  margin-top: -5px;          /* Mueve el subtítulo hacia arriba */
+}
+
+
+/* Estilo para la descripción */
+.simple {
+  font-size: 10px; /* Más grande para mejor legibilidad */
+  font-weight: 400; /* Peso normal para un diseño elegante */
+  color: #444; /* Gris oscuro para mejor contraste */
+  text-align: center;
+  max-width: 800px; /* No muy ancho para mejorar la lectura */
+  margin: 0 auto 40px auto; /* Centrado y con espacio debajo */
+  line-height: 1.5; /* Espaciado entre líneas para mayor claridad */
+}
+
+/* Contenedor de los botones (en fila y centrados) */
+/* Contenedor de los botones (en fila y centrados) */
+.buttons-container {
+  display: flex;               /* Usar flexbox para los botones */
+  justify-content: space-between;  /* Los botones se alinean a la izquierda y derecha */
+  width: 100%;                 /* Los botones usan todo el ancho disponible */
+  max-width: 600px;            /* Limita el ancho máximo de los botones */
+  gap: 10px;                   /* Reducir el espacio entre los botones */
+  margin-top: -20px;            /* Espacio superior para separar de los elementos previos */
+}
+
+/* Estilo base de los botones */
+.animated-button {
+  width: 180px;              /* Reducir el tamaño para acercar los botones */
+  height: 50px;              /* Mantener la altura uniforme */
+  font-size: 18px;           /* Tamaño de letra uniforme */
+  font-weight: bold;
+  color: white;              /* Texto blanco */
+  background-color: #007bff; /* Fondo azul uniforme */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  display: flex;             /* Flexbox para alinear texto */
+  justify-content: center;   /* Centrado horizontal del texto */
+  align-items: center;       /* Centrado vertical del texto */
+}
+
+
+/* Animación al pasar el mouse */
+.animated-button:hover {
+  transform: scale(1.05);      /* Agranda ligeramente el botón */
+  background-color: #0056b3;   /* Azul más oscuro */
+}
+
+/* Animación al hacer clic (selección del botón) */
+.animated-button:active {
+  transform: scale(0.98);      /* Reduce el tamaño ligeramente para simular un "clic" */
+  background-color: #0062ff;   /* Azul más oscuro cuando se selecciona */
+}
+
+/* Estilo específico para el enlace de WhatsApp */
+.whatsapp-link {
+  width: 200px;               /* Igual tamaño para el botón de WhatsApp */
+  height: 50px;               /* Altura uniforme */
+  font-size: 18px;            /* Tamaño de letra uniforme */
+  background-color: #00ff08;  /* Fondo verde para el botón de WhatsApp */
+  color: white;               /* Texto blanco */
+  text-decoration: none;
+  display: flex;              /* Flexbox para alinear texto */
+  justify-content: center;    /* Centrado horizontal del texto */
+  align-items: center;        /* Centrado vertical del texto */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+  background-color: #2aac1b;  /* Verde más oscuro para WhatsApp en hover */
+  color: white;               /* Mantiene el texto blanco */
+}
+
+/* Separar el ícono de WhatsApp */
+.whatsapp-link i {
+  margin-right: 10px;  /* Separa el ícono del texto */
+}
+
+/* Animación de desvanecimiento más profesional */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Inicia desde abajo */
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px); /* Se acerca ligeramente */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Finaliza en su posición original */
+  }
+}
+
+/* Aplicar la animación de desvanecimiento profesional a los títulos */
+.main-title, .sub-title, .simple {
+  opacity: 0; /* Inicialmente invisible */
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.main-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  animation-delay: 0.3s; /* Retraso para que el título aparezca primero */
+}
+
+/* Estilo para el título secundario */
+.sub-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: rgb(35, 152, 230); /* Color base */
+  margin-bottom: 20px;
+  margin-top: -5px;
+  display: inline-block;
+  position: relative;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.3s; /* Retraso para que el título aparezca después */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sutil sombra para destacar las letras */
+}
+
+.sub-title span {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Oculta la parte de la onda fuera de la letra */
+}
+
+.sub-title span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 200% 100%;
+  animation: shiny-wave 1s infinite linear;
+  pointer-events: none;
+}
+
+.sub-title span:nth-child(odd) {
+  animation-delay: 0s;
+}
+
+.sub-title span:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+/* Animación para la onda constante dentro de las letras */
+@keyframes shiny-wave {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.simple {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 40px;
+  animation-delay: 0.3s; /* Retraso para que la descripción aparezca después */
+}
+
+/* Aplicar la animación de desvanecimiento a los botones */
+.buttons-container .animated-button {
+  opacity: 0; /* Iniciar los botones invisibles */
+  transform: translateY(30px); /* Los botones empiezan abajo */
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.3s; /* Retraso para que los botones aparezcan después de los textos */
+}
+
+/* Botones con menor separación */
+.animated-button {
+  width: 180px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  margin-top: 0; /* Asegura que no tenga margen adicional */
+}
+
+/* Animación de hover para botones */
+.animated-button:hover {
+  transform: scale(1.05); /* Agranda ligeramente el botón */
+  background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Animación de clic en los botones */
+.animated-button:active {
+  transform: scale(0.98); /* Reduce el tamaño del botón al hacer clic */
+  background-color: #0062ff;
+}
+
+/* Estilo para el enlace de WhatsApp */
+.whatsapp-link {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 1.3s; /* Retraso para que el enlace de WhatsApp aparezca al final */
+  width: 200px;
+  height: 50px;
+  font-size: 18px;
+  background-color: #00ff08;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+  background-color: #2aac1b; /* Verde más oscuro */
+}
+
+/* Separación entre ícono y texto de WhatsApp */
+.whatsapp-link i {
+  margin-right: 10px;
+}
+
+/* Botón de Descargar CV */
+.cv-download-button {
+  width: 200px; /* Igual tamaño que el botón de WhatsApp */
+  height: 50px;
+  font-size: 18px;
+  background-color: #ff0000; /* Rojo característico de PDF */
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo base para los iconos dentro de los botones */
+.button-icon {
+  margin-right: 10px; /* Espaciado entre icono y texto */
+  font-size: 22px; /* Tamaño del icono */
+}
+
+/* Ícono de PDF */
+.pdf-icon {
+  margin-right: 10px; /* Espaciado entre el icono y el texto */
+  font-size: 22px;
+}
+
+/* Efecto hover */
+.cv-download-button:hover {
+  background-color: #b30000; /* Rojo más oscuro */
+  transform: scale(1.05);
+  color: white; /* Asegura que el texto sea blanco */
+}
+
+/* Asegurar que los botones tengan alineación centrada */
+.animated-button, .whatsapp-link, .cv-download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px; /* Espacio uniforme entre icono y texto */
+}
+
+
+
+/* Ajustes para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .home-container {
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor sin recortarla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita la repetición */
+  }
+
+  .main-title {
+    font-size: 28px; /* Reducir el tamaño del título en móviles */
+  }
+
+  .sub-title {
+    font-size: 24px; /* Ajustar el subtítulo para mejor legibilidad */
+  }
+
+  .simple {
+    font-size: 14px; /* Mejorar la legibilidad del párrafo */
+    max-width: 100%; /* Asegurar que no se corte el texto */
+  }
+
+  .buttons-container {
+    flex-direction: column; /* Alinear los botones en columna */
+    align-items: center; /* Centrar los botones */
+    width: 100%; /* Ajustar al ancho completo */
+    gap: 15px; /* Espaciado entre los botones */
+  }
+
+  .animated-button, 
+  .whatsapp-link, 
+  .cv-download-button {
+    width: 100%; /* Hacer que los botones ocupen el ancho disponible */
+    max-width: 300px; /* No hacerlos demasiado anchos */
+    font-size: 16px; /* Ajustar el tamaño del texto en botones */
+  }
+
+  .button-icon {
+    font-size: 20px; /* Ajustar tamaño de los iconos en móviles */
+    margin-right: 8px; /* Espaciado más compacto */
+  }
+}
+
+
