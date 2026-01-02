@@ -44,7 +44,7 @@ const isProjectPage = projectRoutes.includes(location.pathname);
   Volver
 </Link>
         ) : (
-          <a href="/deploy-example/" className="navbar-brand">
+          <a href="/Portafolio-BI/" className="navbar-brand">
             Mi Portafolio
           </a>
         )}

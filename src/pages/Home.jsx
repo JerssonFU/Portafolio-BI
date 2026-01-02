@@ -24,7 +24,7 @@ function Home() {
 
         {/* Botón de Descargar CV con icono */}
         <a 
-  href="/deploy-example/CV_Jersson_Fernandez.pdf"
+  href="/Portafolio-BI/CV_Jersson_Fernandez.pdf"
   download="CV_Jersson_Fernandez.pdf" 
   className="cv-download-button animated-button"
 >
