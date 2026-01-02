@@ -24,8 +24,8 @@ function Home() {
 
         {/* Botón de Descargar CV con icono */}
         <a 
-  href="/Portafolio-BI/CV_Jersson_Fernandez.pdf"
-  download="CV_Jersson_Fernandez.pdf" 
+  href="/Portafolio-BI/CV_Jersson_Fernández.pdf"
+  download="CV_Jersson_Fernández.pdf" 
   className="cv-download-button animated-button"
 >
   <FaFilePdf className="button-icon" /> Descargar CV
