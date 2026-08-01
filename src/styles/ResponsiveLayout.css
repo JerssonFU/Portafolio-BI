@@ -1,0 +1,3619 @@
+/* =========================================================
+   DISEÑO RESPONSIVE PARA NAVEGADOR AL 100 %
+
+   Este archivo debe importarse DESPUÉS de Theme.css.
+   No reemplaza los estilos anteriores: solo corrige escala,
+   distribución y posicionamiento de las secciones.
+========================================================= */
+
+:root {
+  --responsive-navbar-height: 72px;
+  --responsive-content-width: 1120px;
+  --responsive-gutter: clamp(20px, 4vw, 48px);
+  --responsive-section-space: clamp(52px, 7vh, 82px);
+}
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--responsive-navbar-height) + 14px);
+}
+
+.portfolio-page {
+  width: 100%;
+}
+
+.portfolio-page main {
+  width: 100%;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  min-height: var(--responsive-navbar-height);
+}
+
+.navbar-inner {
+  width: min(
+    1180px,
+    calc(100% - (var(--responsive-gutter) * 2))
+  ) !important;
+}
+
+/* =========================================================
+   SECCIONES GENERALES
+========================================================= */
+
+.portfolio-profile-section,
+.portfolio-section {
+  width: 100%;
+  min-height: calc(100svh - var(--responsive-navbar-height)) !important;
+  height: auto !important;
+  scroll-margin-top: calc(var(--responsive-navbar-height) + 12px);
+}
+
+.portfolio-section {
+  display: flex;
+  align-items: center;
+  padding: var(--responsive-section-space) var(--responsive-gutter) !important;
+}
+
+.section-shell {
+  width: min(var(--responsive-content-width), 100%) !important;
+  margin-inline: auto !important;
+}
+
+/* =========================================================
+   INICIO
+========================================================= */
+
+.portfolio-profile-section .home-hero {
+  width: min(
+    var(--responsive-content-width),
+    calc(100% - (var(--responsive-gutter) * 2))
+  ) !important;
+  min-height: calc(100svh - var(--responsive-navbar-height)) !important;
+  grid-template-columns: minmax(0, 1.18fr) minmax(270px, 0.58fr) !important;
+  align-items: center !important;
+  gap: clamp(42px, 6vw, 78px) !important;
+  padding-block: var(--responsive-section-space) !important;
+}
+
+.home-copy {
+  min-width: 0;
+  max-width: 720px !important;
+}
+
+.home-copy h1 {
+  max-width: 720px !important;
+  font-size: clamp(3.1rem, 4.8vw, 4.85rem) !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.052em !important;
+}
+
+.home-eyebrow {
+  margin-bottom: 18px !important;
+}
+
+.home-role {
+  margin-top: 22px !important;
+  font-size: clamp(1rem, 1.25vw, 1.18rem) !important;
+}
+
+.home-description {
+  max-width: 650px !important;
+  margin-top: 18px !important;
+  font-size: clamp(0.94rem, 1vw, 1.03rem) !important;
+  line-height: 1.72 !important;
+}
+
+.home-meta {
+  margin-top: 20px !important;
+}
+
+.home-actions {
+  margin-top: 27px !important;
+  gap: 10px !important;
+}
+
+.home-button {
+  min-height: 44px !important;
+  padding-inline: 17px !important;
+  font-size: 0.86rem !important;
+}
+
+.home-contact-strip {
+  width: min(100%, 660px) !important;
+  max-width: 660px !important;
+  margin-top: 21px !important;
+  padding-top: 16px !important;
+}
+
+.home-summary {
+  width: min(100%, 292px) !important;
+  justify-self: end;
+  padding: clamp(25px, 2.6vw, 34px) !important;
+}
+
+.summary-number {
+  font-size: clamp(3.8rem, 5.3vw, 5rem) !important;
+}
+
+.home-summary > p {
+  font-size: 0.92rem !important;
+}
+
+.summary-divider {
+  margin-block: 22px !important;
+}
+
+.home-summary dl {
+  gap: 18px !important;
+}
+
+/* =========================================================
+   PERFIL
+========================================================= */
+
+.profile-layout {
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr) !important;
+  align-items: center !important;
+  gap: clamp(38px, 5vw, 66px) !important;
+}
+
+.profile-main {
+  min-width: 0;
+}
+
+.profile-main h2 {
+  max-width: 700px;
+  font-size: clamp(2.55rem, 3.7vw, 3.55rem) !important;
+  line-height: 1.06 !important;
+}
+
+.profile-main > p {
+  font-size: clamp(0.94rem, 1vw, 1.03rem) !important;
+  line-height: 1.72 !important;
+}
+
+.profile-objective {
+  margin-top: 30px !important;
+  padding: 22px !important;
+}
+
+.profile-facts {
+  gap: 13px !important;
+}
+
+.profile-fact-card {
+  min-height: auto !important;
+  padding: 22px !important;
+}
+
+/* =========================================================
+   ENCABEZADOS DE SECCIÓN
+========================================================= */
+
+.section-heading {
+  width: min(720px, 100%) !important;
+  margin-bottom: clamp(30px, 4.5vh, 46px) !important;
+}
+
+.section-heading--left {
+  width: min(820px, 100%) !important;
+}
+
+.section-heading h2 {
+  font-size: clamp(2.35rem, 3.35vw, 3.3rem) !important;
+  line-height: 1.08 !important;
+}
+
+.section-heading p {
+  font-size: clamp(0.92rem, 0.98vw, 1rem) !important;
+  line-height: 1.68 !important;
+}
+
+/* =========================================================
+   COMPETENCIAS
+========================================================= */
+
+.technical-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: clamp(14px, 1.6vw, 20px) !important;
+}
+
+.technical-card {
+  min-width: 0;
+  min-height: 218px !important;
+  padding: clamp(20px, 1.8vw, 25px) !important;
+}
+
+.technical-card h3 {
+  font-size: clamp(1rem, 1.05vw, 1.1rem) !important;
+}
+
+.technical-card p {
+  font-size: clamp(0.83rem, 0.87vw, 0.9rem) !important;
+  line-height: 1.62 !important;
+}
+
+.technical-card-header {
+  margin-bottom: 19px !important;
+}
+
+.technical-tags {
+  gap: 6px !important;
+}
+
+.technical-tags span {
+  font-size: 0.7rem !important;
+}
+
+/* =========================================================
+   PROYECTO
+========================================================= */
+
+.project-case {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) !important;
+  width: 100%;
+}
+
+.project-case-summary,
+.project-contributions {
+  min-width: 0;
+  padding: clamp(27px, 2.7vw, 39px) !important;
+}
+
+.project-case-summary h3 {
+  font-size: clamp(2.3rem, 3.1vw, 3.35rem) !important;
+  line-height: 1.04 !important;
+}
+
+.project-intro {
+  font-size: clamp(0.86rem, 0.92vw, 0.95rem) !important;
+  line-height: 1.66 !important;
+}
+
+.project-metric-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 7px !important;
+}
+
+.project-metric {
+  min-width: 0;
+  min-height: 72px !important;
+  padding: 9px 6px !important;
+}
+
+.project-metric strong {
+  font-size: clamp(1.05rem, 1.35vw, 1.3rem) !important;
+}
+
+.project-metric span {
+  font-size: 0.62rem !important;
+}
+
+.project-contributions-header h3 {
+  font-size: clamp(1.65rem, 2vw, 2.05rem) !important;
+}
+
+.project-contributions li {
+  padding-block: 17px !important;
+}
+
+.project-contributions li p {
+  font-size: clamp(0.82rem, 0.88vw, 0.91rem) !important;
+  line-height: 1.56 !important;
+}
+
+/* =========================================================
+   CERTIFICADOS
+========================================================= */
+
+.certificate-layout {
+  grid-template-columns: minmax(230px, 0.63fr) minmax(0, 1.85fr) !important;
+  gap: clamp(16px, 1.8vw, 24px) !important;
+}
+
+.certificate-list {
+  min-width: 0;
+}
+
+.certificate-list-item {
+  min-height: 62px !important;
+  padding: 12px 14px !important;
+}
+
+.certificate-preview-card {
+  min-width: 0;
+  grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.65fr) !important;
+}
+
+.certificate-document {
+  min-width: 0;
+  padding: clamp(18px, 2vw, 28px) !important;
+}
+
+.certificate-document img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 430px !important;
+  object-fit: contain;
+}
+
+.certificate-information {
+  min-width: 0;
+  padding: clamp(24px, 2.4vw, 34px) !important;
+}
+
+.certificate-information h3 {
+  font-size: clamp(1.65rem, 2.1vw, 2.2rem) !important;
+}
+
+/* =========================================================
+   ESCRITORIOS CON POCA ALTURA
+   Ejemplo: 1366 x 768 o 1600 x 800 al 100 %
+========================================================= */
+
+@media (min-width: 901px) and (max-height: 850px) {
+  :root {
+    --responsive-navbar-height: 66px;
+    --responsive-content-width: 1040px;
+    --responsive-section-space: clamp(34px, 4.6vh, 48px);
+  }
+
+  .portfolio-profile-section .home-hero {
+    grid-template-columns: minmax(0, 1.22fr) minmax(250px, 0.52fr) !important;
+    gap: 42px !important;
+  }
+
+  .home-copy h1 {
+    font-size: clamp(2.95rem, 4.35vw, 4.25rem) !important;
+  }
+
+  .home-role {
+    margin-top: 18px !important;
+  }
+
+  .home-description {
+    margin-top: 14px !important;
+    line-height: 1.62 !important;
+  }
+
+  .home-meta {
+    margin-top: 15px !important;
+  }
+
+  .home-actions {
+    margin-top: 21px !important;
+  }
+
+  .home-contact-strip {
+    margin-top: 17px !important;
+    padding-top: 13px !important;
+  }
+
+  .home-summary {
+    width: min(100%, 270px) !important;
+    padding: 24px !important;
+  }
+
+  .summary-number {
+    font-size: 4rem !important;
+  }
+
+  .profile-main h2 {
+    font-size: clamp(2.3rem, 3.15vw, 3.05rem) !important;
+  }
+
+  .profile-objective,
+  .profile-fact-card {
+    padding: 19px !important;
+  }
+
+  .section-heading {
+    margin-bottom: 26px !important;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(2.05rem, 2.75vw, 2.75rem) !important;
+  }
+
+  .technical-card {
+    min-height: 190px !important;
+    padding: 19px !important;
+  }
+
+  .technical-card-header {
+    margin-bottom: 15px !important;
+  }
+
+  .project-case-summary,
+  .project-contributions {
+    padding: 27px !important;
+  }
+
+  .project-contributions li {
+    padding-block: 14px !important;
+  }
+
+  .certificate-list-item {
+    min-height: 56px !important;
+  }
+
+  .certificate-document img {
+    max-height: 360px !important;
+  }
+}
+
+/* =========================================================
+   PANTALLAS MEDIANAS
+========================================================= */
+
+@media (max-width: 1080px) {
+  :root {
+    --responsive-content-width: 920px;
+  }
+
+  .portfolio-profile-section .home-hero,
+  .profile-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 0.5fr) !important;
+    gap: 34px !important;
+  }
+
+  .technical-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .technical-card {
+    min-height: 205px !important;
+  }
+
+  .project-case {
+    grid-template-columns: 1fr !important;
+  }
+
+  .certificate-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .certificate-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .certificate-preview-card {
+    grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.65fr) !important;
+  }
+}
+
+/* =========================================================
+   TABLETS Y CELULARES
+========================================================= */
+
+@media (max-width: 760px) {
+  :root {
+    --responsive-navbar-height: 64px;
+    --responsive-gutter: 20px;
+    --responsive-section-space: 54px;
+  }
+
+  .portfolio-profile-section .home-hero,
+  .profile-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .portfolio-profile-section .home-hero {
+    align-items: start !important;
+    gap: 34px !important;
+  }
+
+  .home-copy h1 {
+    font-size: clamp(2.75rem, 13vw, 4.15rem) !important;
+  }
+
+  .home-summary {
+    width: 100% !important;
+    max-width: 470px;
+    justify-self: start;
+  }
+
+  .home-actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .home-button {
+    width: 100%;
+  }
+
+  .home-contact-strip {
+    max-width: 100% !important;
+  }
+
+  .technical-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .technical-card {
+    min-height: auto !important;
+  }
+
+  .project-metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .project-metric:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .certificate-list {
+    grid-template-columns: 1fr !important;
+  }
+
+  .certificate-preview-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .certificate-document img {
+    max-height: none !important;
+  }
+}
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 480px) {
+  :root {
+    --responsive-gutter: 16px;
+    --responsive-section-space: 44px;
+  }
+
+  .home-copy h1 {
+    font-size: clamp(2.45rem, 14vw, 3.55rem) !important;
+  }
+
+  .home-role {
+    font-size: 0.94rem !important;
+  }
+
+  .section-heading h2,
+  .profile-main h2 {
+    font-size: clamp(1.95rem, 9.6vw, 2.65rem) !important;
+  }
+
+  .profile-objective,
+  .profile-fact-card,
+  .project-case-summary,
+  .project-contributions,
+  .certificate-information {
+    padding: 20px !important;
+  }
+}
+
+
+
+/* =========================================================
+   CENTRADO UNIFORME DE TODAS LAS SECCIONES
+   Perfil · Competencias · Proyecto · Certificados
+========================================================= */
+
+:root {
+  --navbar-height: 74px;
+  --section-max-width: 1120px;
+  --section-horizontal-space: clamp(20px, 4vw, 50px);
+  --section-vertical-space: clamp(42px, 6vh, 72px);
+}
+
+/* Cada sección ocupa por lo menos el área visible
+   disponible debajo del navbar. */
+
+#profile,
+#tools,
+#projects,
+#certificates {
+  width: 100%;
+
+  min-height:
+    calc(100svh - var(--navbar-height)) !important;
+
+  height: auto !important;
+  padding: 0 !important;
+
+  scroll-margin-top:
+    calc(var(--navbar-height) + 10px);
+}
+
+/* Contenedor principal común */
+
+#profile > [data-section-content],
+#tools > [data-section-content],
+#projects > [data-section-content],
+#certificates > [data-section-content] {
+  width: min(
+    var(--section-max-width),
+    calc(100% - (var(--section-horizontal-space) * 2))
+  );
+
+  min-height:
+    calc(100svh - var(--navbar-height));
+
+  margin-right: auto;
+  margin-left: auto;
+
+  padding-top: var(--section-vertical-space);
+  padding-bottom: var(--section-vertical-space);
+}
+
+/* =========================================================
+   PERFIL
+========================================================= */
+
+#profile > [data-section-content] {
+  display: grid !important;
+
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(320px, 0.72fr);
+
+  align-items: center;
+  align-content: center;
+
+  gap: clamp(38px, 5vw, 68px);
+}
+
+#profile .profile-main {
+  min-width: 0;
+}
+
+#profile .profile-main h2 {
+  max-width: 720px;
+
+  margin-top: 20px;
+  margin-bottom: 22px;
+}
+
+#profile .profile-main > p {
+  max-width: 720px;
+}
+
+#profile .profile-objective {
+  max-width: 720px;
+  margin-top: 30px;
+}
+
+#profile .profile-facts {
+  display: grid;
+  align-content: center;
+
+  width: 100%;
+  min-width: 0;
+
+  gap: 14px;
+}
+
+/* =========================================================
+   COMPETENCIAS
+========================================================= */
+
+#tools > [data-section-content] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#tools .section-heading {
+  width: min(820px, 100%);
+
+  margin-right: auto;
+  margin-bottom: clamp(30px, 4vh, 46px);
+  margin-left: auto;
+
+  text-align: center;
+}
+
+#tools .section-heading p {
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#tools .technical-grid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+}
+
+/* =========================================================
+   PROYECTO
+========================================================= */
+
+#projects > [data-section-content] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#projects .section-heading {
+  width: 100%;
+  max-width: 900px;
+
+  margin-right: auto;
+  margin-bottom: clamp(28px, 4vh, 44px);
+  margin-left: 0;
+
+  text-align: left;
+}
+
+#projects .section-heading h2 {
+  max-width: 880px;
+}
+
+#projects .project-case {
+  width: 100%;
+  max-width: 1120px;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Evita que cualquiera de las dos columnas fuerce
+   el ancho del proyecto. */
+
+#projects .project-case-summary,
+#projects .project-contributions {
+  min-width: 0;
+}
+
+/* =========================================================
+   CERTIFICADOS
+========================================================= */
+
+#certificates > [data-section-content] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#certificates .section-heading {
+  width: min(800px, 100%);
+
+  margin-right: auto;
+  margin-bottom: clamp(30px, 4vh, 44px);
+  margin-left: auto;
+
+  text-align: center;
+}
+
+#certificates .section-heading h2,
+#certificates .section-heading p {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#certificates .section-heading p {
+  max-width: 720px;
+}
+
+/* Lista izquierda y certificado */
+
+#certificates .certificates-layout,
+#certificates .certificate-layout,
+#certificates .certificate-showcase {
+  display: grid;
+
+  grid-template-columns:
+    minmax(220px, 260px)
+    minmax(0, 1fr);
+
+  align-items: stretch;
+
+  width: min(1080px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+
+  gap: 22px !important;
+}
+
+#certificates .certificate-list {
+  display: grid;
+  align-content: start;
+
+  min-width: 0;
+  gap: 10px;
+}
+
+#certificates .certificate-list-item {
+  width: 100%;
+  min-width: 0;
+}
+
+#certificates .certificate-preview-card {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.45fr)
+    minmax(225px, 0.65fr);
+
+  width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+}
+
+#certificates .certificate-document {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+
+  padding:
+    clamp(20px, 2.4vw, 34px);
+}
+
+#certificates .certificate-document img {
+  display: block;
+
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  max-height: 50vh;
+
+  object-fit: contain;
+}
+
+#certificates .certificate-information {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  overflow: hidden;
+}
+
+#certificates .certificate-nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  width: 100%;
+  margin-top: auto;
+
+  gap: 9px;
+}
+
+/* =========================================================
+   PANTALLAS DE POCA ALTURA
+   Ejemplo: laptops de 1366 × 768
+========================================================= */
+
+@media (min-width: 901px) and (max-height: 820px) {
+  :root {
+    --navbar-height: 66px;
+    --section-vertical-space: clamp(30px, 4vh, 46px);
+    --section-max-width: 1080px;
+  }
+
+  #profile .profile-main h2 {
+    font-size:
+      clamp(2.3rem, 3.35vw, 3.35rem) !important;
+  }
+
+  #profile .profile-objective {
+    margin-top: 22px;
+  }
+
+  #tools .section-heading,
+  #projects .section-heading,
+  #certificates .section-heading {
+    margin-bottom: 26px;
+  }
+
+  #tools .technical-card {
+    min-height: 205px !important;
+    padding: 21px !important;
+  }
+
+  #projects .project-case-summary,
+  #projects .project-contributions {
+    padding: 28px !important;
+  }
+
+  #certificates .certificate-document img {
+    max-height: 46vh;
+  }
+}
+
+/* =========================================================
+   PANTALLAS MEDIANAS
+========================================================= */
+
+@media (max-width: 1080px) {
+  :root {
+    --section-max-width: 920px;
+  }
+
+  #profile > [data-section-content] {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(280px, 0.62fr);
+
+    gap: 36px;
+  }
+
+  #tools .technical-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  #projects .project-case {
+    grid-template-columns: 1fr;
+  }
+
+  #certificates .certificates-layout,
+  #certificates .certificate-layout,
+  #certificates .certificate-showcase {
+    grid-template-columns: 1fr;
+
+    width: min(850px, 100%);
+  }
+
+  #certificates .certificate-list {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 820px) {
+  :root {
+    --navbar-height: 64px;
+    --section-horizontal-space: 20px;
+    --section-vertical-space: 54px;
+  }
+
+  #profile > [data-section-content] {
+    grid-template-columns: 1fr;
+
+    align-content: start;
+
+    gap: 32px;
+  }
+
+  #profile .profile-main h2,
+  #profile .profile-main > p,
+  #profile .profile-objective {
+    max-width: none;
+  }
+
+  #tools .technical-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #certificates .certificate-preview-card {
+    grid-template-columns: 1fr;
+  }
+
+  #certificates .certificate-information {
+    border-top: 1px solid var(--theme-border);
+  }
+
+  #certificates .certificate-document img {
+    max-height: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   CELULARES
+========================================================= */
+
+@media (max-width: 600px) {
+  :root {
+    --section-horizontal-space: 16px;
+    --section-vertical-space: 46px;
+  }
+
+  #profile .profile-main h2,
+  #tools .section-heading h2,
+  #projects .section-heading h2,
+  #certificates .section-heading h2 {
+    font-size:
+      clamp(2rem, 10vw, 2.8rem) !important;
+  }
+
+  #certificates .certificate-list {
+    grid-template-columns: 1fr;
+  }
+
+  #certificates .certificate-document {
+    padding: 16px;
+  }
+
+  #certificates .certificate-information {
+    padding: 22px !important;
+  }
+}
+
+/* =========================================================
+   CERTIFICADOS: SHOWCASE CON MINIATURAS INFERIORES
+
+   Este bloque modifica únicamente el diseño interno de la
+   sección Certificados. No altera scrollToSection, navbar,
+   Perfil, Competencias ni Proyecto.
+========================================================= */
+
+#certificates .certificates-showcase-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: min(
+    var(--section-max-width, 1120px),
+    calc(100% - (var(--section-horizontal-space, 40px) * 2))
+  );
+
+  min-height:
+    calc(100svh - var(--navbar-height, 74px));
+
+  margin-inline: auto;
+  padding-block: var(--section-vertical-space, clamp(42px, 6vh, 72px));
+}
+
+/* Encabezado: conserva los textos y el fondo actual */
+
+#certificates .certificates-showcase-heading {
+  width: min(820px, 100%);
+  margin:
+    0 auto
+    clamp(28px, 4vh, 44px) !important;
+  text-align: center;
+}
+
+#certificates .certificates-showcase-heading .section-kicker {
+  display: inline-flex;
+  width: auto;
+  margin-bottom: 16px;
+}
+
+#certificates .certificates-showcase-heading h2 {
+  max-width: 800px;
+  margin: 0 auto 16px;
+  text-align: center;
+}
+
+#certificates .certificates-showcase-heading p {
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* Tarjeta principal: certificado a la izquierda,
+   información a la derecha */
+
+.certificates-showcase {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.62fr)
+    minmax(260px, 0.58fr);
+
+  width: min(1000px, 100%);
+  min-width: 0;
+  margin-inline: auto;
+
+  overflow: hidden;
+
+  border: 1px solid var(--theme-border);
+  border-radius: 22px;
+
+  background: var(--theme-surface);
+  box-shadow: var(--theme-shadow);
+}
+
+/* Zona visual */
+
+.certificates-showcase-visual {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+
+  min-width: 0;
+
+  padding: clamp(20px, 2.4vw, 34px);
+
+  border-right: 1px solid var(--theme-border);
+
+  background: var(--theme-background-soft);
+}
+
+.certificates-showcase-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 300px;
+
+  padding: clamp(8px, 1vw, 14px);
+
+  overflow: hidden;
+
+  border: 1px solid var(--theme-border);
+  border-radius: 14px;
+
+  background: #ffffff;
+}
+
+.certificates-showcase-preview img {
+  display: block;
+
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  max-height: 48vh;
+
+  object-fit: contain;
+  border-radius: 6px;
+
+  box-shadow:
+    0 18px 38px rgba(15, 35, 60, 0.15);
+}
+
+/* Miniaturas */
+
+.certificates-showcase-thumbnails {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.certificates-showcase-thumbnail {
+  position: relative;
+
+  min-width: 0;
+  height: 78px;
+
+  padding: 4px;
+
+  overflow: hidden;
+
+  border: 2px solid var(--theme-border);
+  border-radius: 10px;
+
+  background: var(--theme-surface);
+
+  cursor: pointer;
+  opacity: 0.72;
+
+  transition:
+    border-color 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.certificates-showcase-thumbnail:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  border-color: var(--theme-accent);
+}
+
+.certificates-showcase-thumbnail.active {
+  opacity: 1;
+  border-color: var(--theme-accent);
+
+  box-shadow:
+    0 0 0 3px
+      color-mix(
+        in srgb,
+        var(--theme-accent) 16%,
+        transparent
+      );
+}
+
+.certificates-showcase-thumbnail img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.certificates-showcase-thumbnail > span {
+  position: absolute;
+  right: 6px;
+  bottom: 5px;
+
+  display: grid;
+  place-items: center;
+
+  min-width: 24px;
+  height: 20px;
+  padding-inline: 5px;
+
+  border-radius: 999px;
+
+  background: rgba(8, 17, 31, 0.82);
+  color: #ffffff;
+
+  font-size: 0.62rem;
+  font-weight: 800;
+}
+
+/* Información lateral */
+
+.certificates-showcase-details {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  padding: clamp(28px, 3vw, 42px);
+
+  background: var(--theme-surface);
+  color: var(--theme-text);
+}
+
+.certificates-showcase-count {
+  margin-bottom: 27px;
+
+  color: var(--theme-accent);
+
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.certificates-showcase-label {
+  margin-bottom: 10px;
+
+  color: var(--theme-muted);
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.certificates-showcase-details h3 {
+  margin:
+    0 0
+    clamp(25px, 4vh, 38px);
+
+  color: var(--theme-text);
+
+  font-size: clamp(2rem, 2.8vw, 3rem);
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+
+  overflow-wrap: anywhere;
+}
+
+.certificates-showcase-metadata {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.certificates-showcase-metadata > div {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--theme-border);
+}
+
+.certificates-showcase-metadata > div:first-child {
+  padding-top: 0;
+}
+
+.certificates-showcase-metadata dt {
+  margin-bottom: 7px;
+
+  color: var(--theme-muted);
+
+  font-size: 0.67rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+
+.certificates-showcase-metadata dd {
+  margin: 0;
+
+  color: var(--theme-text-soft);
+
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+/* Botón para abrir PDF */
+
+.certificates-showcase-open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  width: fit-content;
+  max-width: 100%;
+  min-height: 44px;
+
+  margin-top: clamp(24px, 4vh, 36px);
+  padding: 0.72rem 1rem;
+
+  border: 1px solid var(--theme-border);
+  border-radius: 10px;
+
+  background: var(--theme-background-soft);
+  color: var(--theme-text);
+
+  font-size: 0.83rem;
+  font-weight: 750;
+  text-decoration: none;
+
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.certificates-showcase-open:hover {
+  border-color: var(--theme-accent);
+
+  background:
+    color-mix(
+      in srgb,
+      var(--theme-accent) 9%,
+      var(--theme-surface)
+    );
+
+  color: var(--theme-accent);
+}
+
+.certificates-showcase-open svg:last-child {
+  font-size: 0.7rem;
+}
+
+/* Flechas y puntos */
+
+.certificates-showcase-controls {
+  display: grid;
+  grid-template-columns:
+    42px
+    minmax(0, 1fr)
+    42px;
+
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+
+  margin-top: auto;
+  padding-top: clamp(28px, 5vh, 48px);
+}
+
+.certificates-showcase-controls > button {
+  display: grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+  padding: 0;
+
+  border: 1px solid var(--theme-border);
+  border-radius: 50%;
+
+  background: var(--theme-background-soft);
+  color: var(--theme-text);
+
+  cursor: pointer;
+
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.certificates-showcase-controls > button:hover {
+  border-color: var(--theme-accent);
+  background: var(--theme-accent);
+  color: #ffffff;
+}
+
+.certificates-showcase-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.certificates-showcase-dots button {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: var(--theme-border);
+
+  cursor: pointer;
+
+  transition:
+    width 180ms ease,
+    background-color 180ms ease;
+}
+
+.certificates-showcase-dots button.active {
+  width: 24px;
+  background: var(--theme-accent);
+}
+
+/* Modo oscuro: el documento continúa sobre fondo blanco
+   para mantener su legibilidad */
+
+:root[data-theme="dark"] .certificates-showcase-preview {
+  border-color: #30445d;
+  background: #f8fafc;
+}
+
+:root[data-theme="dark"] .certificates-showcase-thumbnail {
+  background: #17263a;
+}
+
+/* Pantallas de poca altura */
+
+@media (min-width: 901px) and (max-height: 820px) {
+  #certificates .certificates-showcase-content {
+    padding-block: 32px;
+  }
+
+  #certificates .certificates-showcase-heading {
+    margin-bottom: 24px !important;
+  }
+
+  .certificates-showcase-preview {
+    min-height: 250px;
+  }
+
+  .certificates-showcase-preview img {
+    max-height: 42vh;
+  }
+
+  .certificates-showcase-thumbnail {
+    height: 62px;
+  }
+
+  .certificates-showcase-details {
+    padding: 27px;
+  }
+
+  .certificates-showcase-count {
+    margin-bottom: 18px;
+  }
+
+  .certificates-showcase-details h3 {
+    margin-bottom: 21px;
+  }
+
+  .certificates-showcase-metadata > div {
+    padding: 13px 0;
+  }
+
+  .certificates-showcase-controls {
+    padding-top: 23px;
+  }
+}
+
+/* Tablets */
+
+@media (max-width: 900px) {
+  .certificates-showcase {
+    grid-template-columns: 1fr;
+    width: min(760px, 100%);
+  }
+
+  .certificates-showcase-visual {
+    border-right: 0;
+    border-bottom: 1px solid var(--theme-border);
+  }
+
+  .certificates-showcase-preview img {
+    max-height: none;
+  }
+
+  .certificates-showcase-controls {
+    margin-top: 15px;
+  }
+}
+
+/* Celulares */
+
+@media (max-width: 600px) {
+  #certificates .certificates-showcase-content {
+    width: calc(100% - 32px);
+    padding-block: 44px;
+  }
+
+  .certificates-showcase-visual {
+    padding: 14px;
+  }
+
+  .certificates-showcase-preview {
+    min-height: 200px;
+    padding: 6px;
+  }
+
+  .certificates-showcase-thumbnails {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .certificates-showcase-thumbnail {
+    height: 76px;
+  }
+
+  .certificates-showcase-details {
+    padding: 22px;
+  }
+
+  .certificates-showcase-open {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE MÓVIL LIMPIO Y UNIFICADO
+
+   - Solo se aplica a tablets y celulares.
+   - No modifica JSX ni la vista de escritorio.
+   - Sustituye los bloques móviles duplicados anteriores.
+========================================================= */
+
+@media (max-width: 900px) {
+  :root {
+    --navbar-height: 64px;
+    --responsive-navbar-height: 64px;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-padding-top: 76px !important;
+  }
+
+  /* -------------------------------------------------------
+     NAVBAR MÓVIL
+  -------------------------------------------------------- */
+
+  .navbar {
+    z-index: 1000 !important;
+  }
+
+  .navbar-inner {
+    display: grid !important;
+    grid-template-columns: 42px minmax(0, 1fr) 46px 40px;
+    align-items: center !important;
+    gap: 7px !important;
+    width: calc(100% - 24px) !important;
+  }
+
+  .navbar-actions-mobile {
+    display: contents !important;
+  }
+
+  .menu-toggle {
+    position: static !important;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    align-self: center !important;
+    justify-self: start !important;
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px !important;
+    height: 42px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 4px !important;
+    transform: none !important;
+    border-radius: 11px !important;
+  }
+
+  .menu-toggle span {
+    display: block !important;
+    width: 18px !important;
+    height: 2px !important;
+    flex: 0 0 2px !important;
+    margin: 0 !important;
+    border-radius: 999px;
+  }
+
+  .navbar-left {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .navbar-brand,
+  .navbar-back-btn {
+    width: 100%;
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .navbar-brand > span:last-child,
+  .navbar-back-btn {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .navbar-actions-mobile .language-btn-mobile {
+    display: inline-flex !important;
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 46px !important;
+    min-width: 46px !important;
+    height: 42px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 11px !important;
+  }
+
+  .navbar-actions-mobile .theme-btn-mobile {
+    display: inline-grid !important;
+    grid-column: 4 !important;
+    grid-row: 1 !important;
+    place-items: center !important;
+    width: 40px !important;
+    min-width: 40px !important;
+    height: 42px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 11px !important;
+  }
+
+  .navbar-right {
+    position: fixed !important;
+    inset: 0 auto 0 0 !important;
+    z-index: 1002 !important;
+    width: min(320px, calc(100vw - 44px)) !important;
+    height: 100dvh !important;
+    padding:
+      max(18px, env(safe-area-inset-top))
+      18px
+      max(18px, env(safe-area-inset-bottom)) !important;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    transform: translateX(-105%);
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .navbar-right.open {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  .mobile-menu-header {
+    min-height: 48px;
+    padding-bottom: 14px !important;
+  }
+
+  .navbar-segments {
+    width: 100%;
+    gap: 9px !important;
+  }
+
+  .navbar-link {
+    width: 100%;
+    min-height: 52px !important;
+    padding-inline: 15px !important;
+    border-radius: 12px !important;
+  }
+
+  .close-btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .navbar-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+
+  /* Debajo del navbar para no bloquear el menú lateral */
+  z-index: 999 !important;
+
+  display: block !important;
+  width: 100vw !important;
+  height: 100dvh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+
+  /* Oscurece y desenfoca el contenido de atrás */
+  background: rgba(2, 8, 23, 0.58) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  /* Impide controlar el contenido que está detrás */
+  pointer-events: auto !important;
+}
+
+
+
+/* Desactiva los controles superiores mientras el menú está abierto */
+.navbar:has(.navbar-right.open) .navbar-left,
+.navbar:has(.navbar-right.open) .navbar-actions-mobile {
+  pointer-events: none !important;
+  user-select: none;
+  filter: blur(1.5px);
+  opacity: 0.48;
+}
+
+
+  /* EN visible arriba, oculto únicamente dentro del panel */
+  .navbar-right > .language-btn,
+  .navbar-right > .language-btn-desktop,
+  .navbar-right > .language-btn-mobile {
+    display: none !important;
+  }
+
+  html:has(.navbar-right.open),
+  body:has(.navbar-right.open) {
+    overflow: hidden !important;
+    overscroll-behavior: none;
+  }
+}
+
+
+/* =========================================================
+   DISTRIBUCIÓN RESPONSIVE DE CONTENIDO
+========================================================= */
+
+@media (max-width: 700px) {
+  :root {
+    --mobile-page-width: 560px;
+    --mobile-gutter: 18px;
+    --mobile-section-top: 38px;
+    --mobile-section-bottom: 50px;
+    --mobile-radius: 14px;
+  }
+
+  .portfolio-profile-section,
+  .portfolio-section,
+  #profile,
+  #tools,
+  #projects,
+  #certificates {
+    width: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
+    scroll-margin-top: 76px !important;
+  }
+
+  .portfolio-section,
+  #profile,
+  #tools,
+  #projects,
+  #certificates {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  #profile > [data-section-content],
+  #tools > [data-section-content],
+  #projects > [data-section-content],
+  #certificates > [data-section-content] {
+    width: min(
+      var(--mobile-page-width),
+      calc(100% - (var(--mobile-gutter) * 2))
+    ) !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin-inline: auto !important;
+    padding:
+      var(--mobile-section-top)
+      0
+      var(--mobile-section-bottom) !important;
+  }
+
+  .section-shell {
+    width: 100% !important;
+    max-width: var(--mobile-page-width) !important;
+    margin-inline: auto !important;
+  }
+
+  /* -------------------------------------------------------
+     ENCABEZADOS
+  -------------------------------------------------------- */
+
+  .section-heading,
+  .section-heading--left,
+  #tools .section-heading,
+  #projects .section-heading,
+  #certificates .section-heading,
+  #certificates .certificates-showcase-heading {
+    width: 100% !important;
+    max-width: 500px !important;
+    margin: 0 auto 30px !important;
+    text-align: center !important;
+  }
+
+  .section-kicker,
+  .section-kicker--dark,
+  .home-eyebrow {
+    width: fit-content !important;
+    max-width: 100%;
+    min-height: 28px;
+    margin-inline: auto !important;
+    padding: 6px 10px !important;
+    font-size: 0.66rem !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0.1em !important;
+    text-align: center;
+    white-space: normal !important;
+  }
+
+  .section-heading h2,
+  .section-heading--left h2,
+  .profile-main h2,
+  #tools .section-heading h2,
+  #projects .section-heading h2,
+  #certificates .section-heading h2,
+  #certificates .certificates-showcase-heading h2 {
+    width: 100%;
+    max-width: 500px !important;
+    margin: 16px auto 15px !important;
+    font-size: clamp(1.95rem, 8.8vw, 2.55rem) !important;
+    line-height: 1.07 !important;
+    letter-spacing: -0.042em !important;
+    text-align: center !important;
+    text-wrap: balance;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .section-heading p,
+  .section-heading--left p,
+  #tools .section-heading p,
+  #projects .section-heading p,
+  #certificates .section-heading p,
+  #certificates .certificates-showcase-heading p {
+    width: 100%;
+    max-width: 42ch !important;
+    margin-inline: auto !important;
+    font-size: 0.9rem !important;
+    line-height: 1.68 !important;
+    text-align: center !important;
+    text-wrap: pretty;
+  }
+
+  /* -------------------------------------------------------
+     INICIO
+  -------------------------------------------------------- */
+
+  .portfolio-profile-section {
+    overflow: hidden !important;
+  }
+
+  .portfolio-profile-section .home-hero {
+    width: min(
+      var(--mobile-page-width),
+      calc(100% - (var(--mobile-gutter) * 2))
+    ) !important;
+    min-height: auto !important;
+    margin-inline: auto !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    align-items: start !important;
+    gap: 28px !important;
+    padding: 34px 0 48px !important;
+  }
+
+  .home-copy {
+    width: 100%;
+    max-width: none !important;
+  }
+
+  .home-copy .home-eyebrow {
+    margin-left: 0 !important;
+  }
+
+  .home-copy h1 {
+    width: 100%;
+    max-width: 430px !important;
+    font-size: clamp(2.45rem, 11.6vw, 3.2rem) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.05em !important;
+    text-wrap: balance;
+  }
+
+  .home-role {
+    margin-top: 20px !important;
+    font-size: 0.94rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .home-role > span {
+    display: none;
+  }
+
+  .home-role > strong {
+    display: block;
+    margin-top: 3px;
+  }
+
+  .home-description {
+    max-width: 42ch !important;
+    margin-top: 17px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.72 !important;
+  }
+
+  .home-meta {
+    margin-top: 19px !important;
+    gap: 10px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .home-actions {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100%;
+    gap: 10px !important;
+    margin-top: 25px !important;
+  }
+
+  .home-button {
+    width: 100%;
+    min-height: 48px !important;
+    padding-inline: 15px !important;
+    font-size: 0.86rem !important;
+  }
+
+  .home-contact-strip {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100% !important;
+    max-width: none !important;
+    gap: 12px !important;
+    margin-top: 22px !important;
+    padding-top: 18px !important;
+  }
+
+  .home-contact-item {
+    width: 100%;
+    min-width: 0;
+    font-size: 0.82rem !important;
+    overflow-wrap: anywhere;
+  }
+
+  .home-summary {
+    width: 100% !important;
+    max-width: none !important;
+    justify-self: stretch !important;
+    padding: 22px !important;
+    border-radius: var(--mobile-radius) !important;
+  }
+
+  .summary-number {
+    font-size: clamp(3.4rem, 17vw, 4.4rem) !important;
+  }
+
+  /* -------------------------------------------------------
+     PERFIL
+  -------------------------------------------------------- */
+
+  #profile .profile-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100%;
+    gap: 26px !important;
+  }
+
+  #profile .profile-main,
+  #profile .profile-facts {
+    width: 100%;
+    min-width: 0;
+  }
+
+  #profile .profile-main > p {
+    max-width: 42ch !important;
+    margin-inline: auto !important;
+    font-size: 0.9rem !important;
+    line-height: 1.72 !important;
+    text-align: left !important;
+  }
+
+  #profile .profile-objective {
+    width: 100%;
+    max-width: 500px;
+    margin: 23px auto 0 !important;
+    grid-template-columns: 38px minmax(0, 1fr) !important;
+    gap: 13px !important;
+    padding: 17px !important;
+    border-radius: 0 var(--mobile-radius) var(--mobile-radius) 0 !important;
+  }
+
+  #profile .profile-facts {
+    display: grid;
+    gap: 11px !important;
+  }
+
+  #profile .profile-fact-card {
+    width: 100%;
+    grid-template-columns: 32px minmax(0, 1fr) !important;
+    gap: 12px !important;
+    padding: 17px !important;
+    border-radius: var(--mobile-radius) !important;
+  }
+
+  /* -------------------------------------------------------
+     COMPETENCIAS
+  -------------------------------------------------------- */
+
+  #tools .technical-grid,
+  .technical-grid {
+    display: grid !important;
+    grid-template-columns: none !important;
+    grid-auto-flow: column;
+    grid-auto-columns: min(82vw, 320px);
+    width: 100% !important;
+    max-width: var(--mobile-page-width);
+    margin-inline: auto !important;
+    gap: 13px !important;
+    padding: 2px 1px 14px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  #tools .technical-card,
+  .technical-card {
+    width: 100%;
+    min-height: 250px !important;
+    padding: 19px !important;
+    border-radius: var(--mobile-radius) !important;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  #tools .technical-card h3 {
+    margin: 19px 0 10px !important;
+    font-size: 1rem !important;
+  }
+
+  #tools .technical-card p {
+    font-size: 0.83rem !important;
+    line-height: 1.64 !important;
+  }
+
+  /* -------------------------------------------------------
+     PROYECTO
+  -------------------------------------------------------- */
+
+  #projects .project-case {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: var(--mobile-page-width) !important;
+    margin-inline: auto !important;
+    border-radius: 16px !important;
+  }
+
+  #projects .project-case-summary,
+  #projects .project-contributions {
+    width: 100%;
+    min-width: 0;
+    padding: 20px !important;
+  }
+
+  #projects .project-case-summary h3 {
+    margin: 23px 0 7px !important;
+    font-size: clamp(2rem, 9.5vw, 2.55rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.045em !important;
+    text-wrap: balance;
+  }
+
+  #projects .project-intro {
+    margin-top: 18px !important;
+    font-size: 0.84rem !important;
+    line-height: 1.66 !important;
+  }
+
+  #projects .project-metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100%;
+    gap: 8px !important;
+    margin-top: 22px !important;
+  }
+
+  #projects .project-metric {
+    min-height: 76px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 7px !important;
+  }
+
+  #projects .project-metric:last-child {
+    grid-column: 1 / -1;
+  }
+
+  #projects .project-case-actions .button-primary {
+    width: 100%;
+    min-height: 47px;
+  }
+
+  #projects .project-contributions li {
+    grid-template-columns: 31px minmax(0, 1fr) !important;
+    gap: 10px !important;
+    padding: 15px 0 !important;
+  }
+
+  /* -------------------------------------------------------
+     CERTIFICADOS
+  -------------------------------------------------------- */
+
+  #certificates .certificates-showcase-content {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  #certificates .certificates-showcase {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: var(--mobile-page-width) !important;
+    margin-inline: auto !important;
+    border-radius: 16px !important;
+  }
+
+  #certificates .certificates-showcase-visual {
+    width: 100%;
+    min-width: 0;
+    padding: 12px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--theme-border);
+  }
+
+  #certificates .certificates-showcase-preview {
+    width: 100%;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 10;
+    padding: 5px !important;
+    border-radius: 10px !important;
+  }
+
+  #certificates .certificates-showcase-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #certificates .certificates-showcase-thumbnails {
+    display: flex !important;
+    width: 100%;
+    gap: 8px !important;
+    margin-top: 10px !important;
+    padding-bottom: 3px;
+    overflow-x: auto !important;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #certificates .certificates-showcase-thumbnail {
+    flex: 0 0 92px;
+    width: 92px;
+    height: 60px !important;
+    border-radius: 8px !important;
+    scroll-snap-align: start;
+  }
+
+  #certificates .certificates-showcase-details {
+    width: 100%;
+    min-width: 0;
+    padding: 19px !important;
+  }
+
+  #certificates .certificates-showcase-details h3 {
+    margin-bottom: 20px !important;
+    font-size: clamp(1.8rem, 8.8vw, 2.35rem) !important;
+    line-height: 1.05 !important;
+    text-wrap: balance;
+  }
+
+  #certificates .certificates-showcase-open {
+    width: 100% !important;
+    min-height: 46px;
+  }
+}
+
+
+@media (max-width: 390px) {
+  .navbar-inner {
+    grid-template-columns: 40px minmax(0, 1fr) 43px 38px;
+    gap: 5px !important;
+    width: calc(100% - 18px) !important;
+  }
+
+  .menu-toggle {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .navbar-actions-mobile .language-btn-mobile {
+    width: 43px !important;
+    min-width: 43px !important;
+    height: 40px !important;
+  }
+
+  .navbar-actions-mobile .theme-btn-mobile {
+    width: 38px !important;
+    min-width: 38px !important;
+    height: 40px !important;
+  }
+
+  .navbar-right {
+    width: min(310px, calc(100vw - 34px)) !important;
+  }
+}
+
+
+@media (max-width: 380px) {
+  :root {
+    --mobile-gutter: 14px;
+    --mobile-section-top: 34px;
+    --mobile-section-bottom: 44px;
+  }
+
+  .home-copy h1 {
+    font-size: clamp(2.3rem, 11.5vw, 2.85rem) !important;
+  }
+
+  .section-heading h2,
+  .profile-main h2,
+  #tools .section-heading h2,
+  #projects .section-heading h2,
+  #certificates .section-heading h2,
+  #certificates .certificates-showcase-heading h2 {
+    font-size: clamp(1.8rem, 8.5vw, 2.25rem) !important;
+  }
+
+  #tools .technical-grid {
+    grid-auto-columns: min(84vw, 295px);
+  }
+
+  #profile .profile-objective,
+  #profile .profile-fact-card,
+  #projects .project-case-summary,
+  #projects .project-contributions,
+  #certificates .certificates-showcase-details {
+    padding: 16px !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   SEPARACIÓN VISUAL ENTRE APARTADOS
+   No modifica el contenido ni scrollToSection
+========================================================= */
+
+:root {
+  --section-separation: clamp(85px, 8vw, 110px);
+}
+
+/* Perfil ya tiene el espacio correcto respecto a Inicio */
+#tools,
+#projects,
+#certificates {
+  margin-top: var(--section-separation) !important;
+}
+
+/* Separación en tablets */
+@media (max-width: 820px) {
+  :root {
+    --section-separation: 64px;
+  }
+}
+
+/* Separación en celulares */
+@media (max-width: 600px) {
+  :root {
+    --section-separation: 48px;
+  }
+}
+
+
+
+
+
+
+/* =========================================================
+   INTERACCIÓN PROFESIONAL — TARJETAS DE COMPETENCIAS
+   No modifica tamaños, columnas ni responsive
+========================================================= */
+
+#tools .technical-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  cursor: default;
+}
+
+/* Iluminación interior muy discreta */
+#tools .technical-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 88% 12%,
+      rgba(30, 95, 157, 0.14),
+      transparent 34%
+    );
+
+  opacity: 0;
+  transition: opacity 280ms ease;
+}
+
+/* Mantiene el contenido por encima del efecto */
+#tools .technical-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Aparición escalonada de las seis tarjetas */
+#tools .technical-card.reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.985);
+}
+
+#tools .technical-card.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+
+  animation: technical-card-entry 650ms
+    cubic-bezier(0.22, 1, 0.36, 1) backwards;
+
+  animation-delay: calc(var(--card-index) * 85ms);
+}
+
+@keyframes technical-card-entry {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Línea inferior animada */
+#tools .technical-card::after {
+  transform: scaleX(0.3);
+  transform-origin: left center;
+  transition:
+    transform 350ms ease,
+    opacity 350ms ease;
+}
+
+/* Ícono */
+#tools .technical-icon {
+  transition:
+    transform 260ms ease,
+    border-color 260ms ease,
+    background-color 260ms ease,
+    box-shadow 260ms ease;
+}
+
+/* Número */
+#tools .technical-number {
+  transition:
+    color 240ms ease,
+    letter-spacing 240ms ease;
+}
+
+/* Etiquetas */
+#tools .technical-tags span {
+  transition:
+    transform 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+/* Efectos solamente en dispositivos que tienen mouse */
+@media (hover: hover) and (pointer: fine) {
+  #tools .technical-card.visible {
+    transition:
+      transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 260ms ease,
+      box-shadow 260ms ease,
+      background-color 260ms ease;
+  }
+
+  #tools .technical-card.visible:hover {
+    transform: translateY(-8px) scale(1.012);
+
+    border-color: rgba(30, 95, 157, 0.48) !important;
+
+    box-shadow:
+      0 28px 60px rgba(15, 35, 60, 0.16) !important;
+  }
+
+  #tools .technical-card.visible:hover::before {
+    opacity: 1;
+  }
+
+  #tools .technical-card.visible:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  #tools .technical-card.visible:hover .technical-icon {
+    transform: translateY(-3px) rotate(-4deg) scale(1.08);
+
+    border-color: rgba(30, 95, 157, 0.42) !important;
+    background: rgba(30, 95, 157, 0.12) !important;
+
+    box-shadow:
+      0 10px 24px rgba(30, 95, 157, 0.16);
+  }
+
+  #tools .technical-card.visible:hover .technical-number {
+    color: var(--theme-accent) !important;
+    letter-spacing: 0.13em;
+  }
+
+  #tools .technical-card.visible:hover .technical-tags span {
+    transform: translateY(-1px);
+    border-color: rgba(30, 95, 157, 0.3) !important;
+    background: rgba(30, 95, 157, 0.08) !important;
+    color: var(--theme-accent) !important;
+  }
+}
+
+/* Respeta configuraciones de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  #tools .technical-card,
+  #tools .technical-card.reveal,
+  #tools .technical-card.reveal.visible,
+  #tools .technical-icon,
+  #tools .technical-number,
+  #tools .technical-tags span {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   DISEÑO PREMIUM — SECCIÓN COMPETENCIAS
+   Conserva las animaciones existentes.
+   No modifica Proyecto, Perfil, Inicio ni Certificados.
+========================================================= */
+
+:root {
+  --skills-grid-line: rgba(30, 95, 157, 0.065);
+  --skills-section-glow: rgba(37, 99, 235, 0.11);
+}
+
+:root[data-theme="dark"] {
+  --skills-grid-line: rgba(105, 169, 232, 0.055);
+  --skills-section-glow: rgba(37, 99, 235, 0.14);
+}
+
+/* Fondo dinámico y discreto de la sección */
+
+#tools {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 12% 16%,
+      var(--skills-section-glow),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 88% 78%,
+      var(--skills-section-glow),
+      transparent 28%
+    ),
+    var(--theme-background) !important;
+}
+
+/* Cuadrícula relacionada con datos */
+
+#tools::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      var(--skills-grid-line) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      var(--skills-grid-line) 1px,
+      transparent 1px
+    );
+
+  background-size: 46px 46px;
+
+  opacity: 0.65;
+
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      #000 16%,
+      #000 84%,
+      transparent
+    );
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      #000 16%,
+      #000 84%,
+      transparent
+    );
+}
+
+#tools > [data-section-content] {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mayor separación visual entre tarjetas */
+
+#tools .technical-grid {
+  gap: clamp(18px, 1.8vw, 24px) !important;
+}
+
+/* Color particular por cada competencia */
+
+#tools .technical-card:nth-child(1) {
+  --card-accent: #2563eb;
+}
+
+#tools .technical-card:nth-child(2) {
+  --card-accent: #0284c7;
+}
+
+#tools .technical-card:nth-child(3) {
+  --card-accent: #0f766e;
+}
+
+#tools .technical-card:nth-child(4) {
+  --card-accent: #4f46e5;
+}
+
+#tools .technical-card:nth-child(5) {
+  --card-accent: #7c3aed;
+}
+
+#tools .technical-card:nth-child(6) {
+  --card-accent: #0369a1;
+}
+
+/* Nuevo diseño de tarjeta */
+
+#tools .technical-card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 275px !important;
+  padding: clamp(23px, 2vw, 28px) !important;
+
+  border: 1px solid var(--theme-border) !important;
+  border-radius: 18px !important;
+
+  background:
+    radial-gradient(
+      circle at 92% 7%,
+      color-mix(
+        in srgb,
+        var(--card-accent) 13%,
+        transparent
+      ),
+      transparent 33%
+    ),
+    linear-gradient(
+      145deg,
+      color-mix(
+        in srgb,
+        var(--card-accent) 4%,
+        var(--theme-surface)
+      ),
+      var(--theme-surface) 58%
+    ) !important;
+
+  box-shadow:
+    inset 0 4px 0 var(--card-accent),
+    0 20px 46px rgba(15, 35, 60, 0.09) !important;
+}
+
+/* Decoración interna superior */
+
+#tools .technical-card::before {
+  background:
+    linear-gradient(
+      135deg,
+      transparent 55%,
+      color-mix(
+        in srgb,
+        var(--card-accent) 10%,
+        transparent
+      ) 55%
+    ) !important;
+
+  opacity: 0.42;
+}
+
+/* Línea inferior mantiene su animación */
+
+#tools .technical-card::after {
+  right: 27px !important;
+  bottom: 0 !important;
+  left: 27px !important;
+
+  height: 3px !important;
+  border-radius: 999px 999px 0 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--card-accent),
+      color-mix(
+        in srgb,
+        var(--card-accent) 45%,
+        transparent
+      ),
+      transparent
+    ) !important;
+}
+
+/* Encabezado de tarjeta */
+
+#tools .technical-card-header {
+  position: relative;
+
+  min-height: 54px;
+  margin-bottom: 18px !important;
+
+  justify-content: flex-end !important;
+}
+
+/* Número grande como marca visual */
+
+#tools .technical-number {
+  position: absolute;
+  top: -4px;
+  left: 0;
+
+  font-size: clamp(2.5rem, 3vw, 3.15rem) !important;
+  font-weight: 850 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.07em !important;
+
+  color: rgba(30, 95, 157, 0.12) !important;
+  color:
+    color-mix(
+      in srgb,
+      var(--card-accent) 17%,
+      transparent
+    ) !important;
+
+  user-select: none;
+}
+
+/* Ícono destacado */
+
+#tools .technical-icon {
+  width: 52px !important;
+  height: 52px !important;
+
+  border: 0 !important;
+  border-radius: 15px !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--card-accent),
+      color-mix(
+        in srgb,
+        var(--card-accent) 72%,
+        #071527
+      )
+    ) !important;
+
+  color: #ffffff !important;
+  font-size: 1.2rem !important;
+
+  box-shadow:
+    0 11px 25px
+    color-mix(
+      in srgb,
+      var(--card-accent) 27%,
+      transparent
+    ) !important;
+}
+
+/* Título de la competencia */
+
+#tools .technical-card h3 {
+  position: relative;
+
+  margin: 5px 0 14px !important;
+  padding-bottom: 13px;
+
+  color: var(--theme-text) !important;
+  font-size: clamp(1.03rem, 1.15vw, 1.18rem) !important;
+  line-height: 1.3 !important;
+}
+
+/* Pequeña línea debajo del título */
+
+#tools .technical-card h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 38px;
+  height: 3px;
+
+  border-radius: 999px;
+  background: var(--card-accent);
+}
+
+/* Descripción */
+
+#tools .technical-card p {
+  margin: 0 !important;
+
+  color: var(--theme-muted) !important;
+  font-size: clamp(0.84rem, 0.9vw, 0.92rem) !important;
+  line-height: 1.7 !important;
+}
+
+/* Las etiquetas quedan alineadas abajo */
+
+#tools .technical-tags {
+  margin-top: auto !important;
+  padding-top: 22px;
+
+  gap: 7px !important;
+}
+
+/* Etiquetas modernas */
+
+#tools .technical-tags span {
+  padding: 6px 10px !important;
+
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--card-accent) 23%,
+      transparent
+    ) !important;
+
+  border-radius: 999px !important;
+
+  background:
+    color-mix(
+      in srgb,
+      var(--card-accent) 7%,
+      var(--theme-surface)
+    ) !important;
+
+  color:
+    color-mix(
+      in srgb,
+      var(--card-accent) 78%,
+      var(--theme-text)
+    ) !important;
+
+  font-size: 0.69rem !important;
+  font-weight: 750 !important;
+  letter-spacing: 0.015em;
+}
+
+/* Mejora el efecto al pasar el mouse,
+   sin reemplazar el movimiento de tu animación */
+
+@media (hover: hover) and (pointer: fine) {
+  #tools .technical-card.visible:hover {
+    border-color:
+      color-mix(
+        in srgb,
+        var(--card-accent) 48%,
+        var(--theme-border)
+      ) !important;
+
+    background:
+      radial-gradient(
+        circle at 92% 7%,
+        color-mix(
+          in srgb,
+          var(--card-accent) 20%,
+          transparent
+        ),
+        transparent 38%
+      ),
+      linear-gradient(
+        145deg,
+        color-mix(
+          in srgb,
+          var(--card-accent) 8%,
+          var(--theme-surface)
+        ),
+        var(--theme-surface) 62%
+      ) !important;
+
+    box-shadow:
+      inset 0 4px 0 var(--card-accent),
+      0 30px 70px
+      color-mix(
+        in srgb,
+        var(--card-accent) 16%,
+        transparent
+      ) !important;
+  }
+
+  #tools
+  .technical-card.visible:hover
+  .technical-icon {
+    border: 0 !important;
+
+    background:
+      linear-gradient(
+        135deg,
+        var(--card-accent),
+        color-mix(
+          in srgb,
+          var(--card-accent) 70%,
+          #071527
+        )
+      ) !important;
+
+    box-shadow:
+      0 15px 32px
+      color-mix(
+        in srgb,
+        var(--card-accent) 34%,
+        transparent
+      ) !important;
+  }
+
+  #tools
+  .technical-card.visible:hover
+  .technical-tags span {
+    border-color:
+      color-mix(
+        in srgb,
+        var(--card-accent) 38%,
+        transparent
+      ) !important;
+
+    background:
+      color-mix(
+        in srgb,
+        var(--card-accent) 12%,
+        var(--theme-surface)
+      ) !important;
+
+    color: var(--card-accent) !important;
+  }
+}
+
+/* Ajustes exclusivos para celulares */
+
+@media (max-width: 600px) {
+  #tools::before {
+    background-size: 34px 34px;
+    opacity: 0.45;
+  }
+
+  #tools .technical-card {
+    min-height: 250px !important;
+    padding: 21px !important;
+    border-radius: 16px !important;
+  }
+
+  #tools .technical-icon {
+    width: 47px !important;
+    height: 47px !important;
+    border-radius: 13px !important;
+  }
+
+  #tools .technical-number {
+    font-size: 2.55rem !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   COMPETENCIAS — AJUSTE CORPORATIVO Y FORMAL
+   Mantiene las animaciones existentes
+========================================================= */
+
+/* Paleta más sobria y profesional */
+
+
+
+/* Paleta ejecutiva alineada con el resto del portafolio */
+
+#tools .technical-card:nth-child(1) {
+  --card-accent: #2f6fa3;
+}
+
+#tools .technical-card:nth-child(2) {
+  --card-accent: #36728f;
+}
+
+#tools .technical-card:nth-child(3) {
+  --card-accent: #3f746f;
+}
+
+#tools .technical-card:nth-child(4) {
+  --card-accent: #496881;
+}
+
+#tools .technical-card:nth-child(5) {
+  --card-accent: #52677c;
+}
+
+#tools .technical-card:nth-child(6) {
+  --card-accent: #376d87;
+}
+
+/* Fondo técnico más discreto */
+
+#tools {
+  background:
+    radial-gradient(
+      circle at 15% 18%,
+      rgba(46, 91, 142, 0.08),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 88% 76%,
+      rgba(46, 91, 142, 0.055),
+      transparent 31%
+    ),
+    var(--theme-background) !important;
+}
+
+#tools::before {
+  background-size: 58px 58px !important;
+  opacity: 0.28 !important;
+}
+
+/* Tarjeta más corporativa */
+
+#tools .technical-card {
+  min-height: 275px !important;
+  padding: 26px !important;
+
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--card-accent) 38%,
+      var(--theme-border)
+    ) !important;
+
+  border-radius: 12px !important;
+
+  background:
+    radial-gradient(
+      circle at 94% 6%,
+      color-mix(
+        in srgb,
+        var(--card-accent) 13%,
+        transparent
+      ),
+      transparent 34%
+    ),
+    linear-gradient(
+      145deg,
+      color-mix(
+        in srgb,
+        var(--card-accent) 9%,
+        var(--theme-surface)
+      ),
+      var(--theme-surface) 72%
+    ) !important;
+
+  box-shadow:
+    inset 0 2px 0 var(--card-accent),
+    0 16px 38px
+      color-mix(
+        in srgb,
+        var(--card-accent) 10%,
+        rgba(7, 20, 38, 0.1)
+      ) !important;
+}
+
+
+/* Elimina la figura diagonal demasiado llamativa */
+
+#tools .technical-card::before {
+  background:
+    radial-gradient(
+      circle at 92% 8%,
+      color-mix(
+        in srgb,
+        var(--card-accent) 8%,
+        transparent
+      ),
+      transparent 34%
+    ) !important;
+
+  opacity: 1 !important;
+}
+
+/* Línea inferior más fina */
+
+/* Elimina la línea inferior sin afectar el contorno */
+#tools .technical-card::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Encabezado */
+
+#tools .technical-card-header {
+  min-height: 46px;
+  margin-bottom: 17px !important;
+}
+
+/* Número más pequeño y formal */
+
+#tools .technical-number {
+  top: 2px !important;
+  left: 0 !important;
+
+  font-size: 1.45rem !important;
+  font-weight: 750 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.04em !important;
+
+  color:
+    color-mix(
+      in srgb,
+      var(--card-accent) 55%,
+      var(--theme-muted)
+    ) !important;
+}
+
+/* Ícono sin degradado intenso */
+
+#tools .technical-icon {
+  width: 46px !important;
+  height: 46px !important;
+
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--card-accent) 48%,
+      transparent
+    ) !important;
+
+  border-radius: 10px !important;
+
+  background:
+    color-mix(
+      in srgb,
+      var(--card-accent) 20%,
+      var(--theme-surface)
+    ) !important;
+
+  color:
+    color-mix(
+      in srgb,
+      var(--card-accent) 90%,
+      #ffffff
+    ) !important;
+
+  font-size: 1.05rem !important;
+
+  box-shadow:
+    0 7px 18px
+      color-mix(
+        in srgb,
+        var(--card-accent) 14%,
+        transparent
+      ) !important;
+}
+
+/* Título */
+
+#tools .technical-card h3 {
+  margin: 5px 0 13px !important;
+  padding-bottom: 11px;
+
+  font-size: 1.02rem !important;
+  font-weight: 750 !important;
+  line-height: 1.35 !important;
+}
+
+/* Línea del título más sobria */
+
+#tools .technical-card h3::after {
+  width: 32px;
+  height: 2px;
+  background: var(--card-accent);
+}
+
+/* Texto descriptivo */
+
+#tools .technical-card p {
+  font-size: 0.86rem !important;
+  line-height: 1.68 !important;
+}
+
+/* Etiquetas menos infantiles */
+
+#tools .technical-tags {
+  gap: 6px !important;
+  padding-top: 20px;
+}
+
+#tools .technical-tags span {
+  padding: 5px 9px !important;
+
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--card-accent) 34%,
+      var(--theme-border)
+    ) !important;
+
+  border-radius: 6px !important;
+
+  background:
+    color-mix(
+      in srgb,
+      var(--card-accent) 11%,
+      var(--theme-surface)
+    ) !important;
+
+  color:
+    color-mix(
+      in srgb,
+      var(--card-accent) 82%,
+      var(--theme-text)
+    ) !important;
+
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em;
+}
+
+/* Hover profesional y moderado */
+
+@media (hover: hover) and (pointer: fine) {
+  #tools .technical-card.visible:hover {
+  transform: translateY(-6px) scale(1.005);
+
+  border-color:
+    color-mix(
+      in srgb,
+      var(--card-accent) 72%,
+      var(--theme-border)
+    ) !important;
+
+  background:
+    radial-gradient(
+      circle at 94% 6%,
+      color-mix(
+        in srgb,
+        var(--card-accent) 20%,
+        transparent
+      ),
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      color-mix(
+        in srgb,
+        var(--card-accent) 14%,
+        var(--theme-surface)
+      ),
+      var(--theme-surface) 74%
+    ) !important;
+
+  box-shadow:
+    inset 0 2px 0 var(--card-accent),
+    0 24px 48px
+      color-mix(
+        in srgb,
+        var(--card-accent) 20%,
+        rgba(7, 20, 38, 0.16)
+      ) !important;
+}
+
+  #tools .technical-card.visible:hover .technical-icon {
+    transform: translateY(-2px);
+
+    border-color:
+      color-mix(
+        in srgb,
+        var(--card-accent) 48%,
+        transparent
+      ) !important;
+
+    background:
+      color-mix(
+        in srgb,
+        var(--card-accent) 17%,
+        var(--theme-surface)
+      ) !important;
+
+    color: var(--card-accent) !important;
+
+    box-shadow:
+      0 8px 18px
+      color-mix(
+        in srgb,
+        var(--card-accent) 15%,
+        transparent
+      ) !important;
+  }
+
+  #tools .technical-card.visible:hover .technical-number {
+    color: var(--card-accent) !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  #tools .technical-card.visible:hover .technical-tags span {
+    transform: translateY(-1px);
+
+    background:
+      color-mix(
+        in srgb,
+        var(--card-accent) 9%,
+        var(--theme-surface)
+      ) !important;
+
+    color: var(--card-accent) !important;
+  }
+}
+
+/* Ajuste móvil */
+
+@media (max-width: 600px) {
+  #tools .technical-card {
+    min-height: 245px !important;
+    padding: 21px !important;
+    border-radius: 11px !important;
+  }
+
+  #tools .technical-number {
+    font-size: 1.25rem !important;
+  }
+
+  #tools .technical-icon {
+    width: 43px !important;
+    height: 43px !important;
+    border-radius: 9px !important;
+  }
+}
+
+
+
+
+/* =========================================================
+   COLORES DE COMPETENCIAS SEGÚN EL TEMA
+   Solo modifica colores
+========================================================= */
+
+/* ---------------------------------------------------------
+   MODO CLARO
+   Paleta azul corporativa uniforme
+--------------------------------------------------------- */
+
+:root:not([data-theme="dark"]) #tools .technical-card {
+  --card-accent: #2f6fa3 !important;
+
+  border-color: rgba(47, 111, 163, 0.42) !important;
+
+  background:
+    radial-gradient(
+      circle at 94% 6%,
+      rgba(47, 111, 163, 0.09),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      #f4f8fc 0%,
+      #ffffff 68%
+    ) !important;
+
+  box-shadow:
+    inset 0 2px 0 rgba(47, 111, 163, 0.85),
+    0 16px 38px rgba(28, 59, 88, 0.1) !important;
+}
+
+/* Número en modo claro */
+
+:root:not([data-theme="dark"]) #tools .technical-number {
+  color: #3f6f96 !important;
+}
+
+/* Ícono en modo claro */
+
+:root:not([data-theme="dark"]) #tools .technical-icon {
+  border-color: rgba(47, 111, 163, 0.36) !important;
+  background: rgba(47, 111, 163, 0.09) !important;
+  color: #2f6fa3 !important;
+
+  box-shadow:
+    0 7px 18px rgba(47, 111, 163, 0.1) !important;
+}
+
+/* Línea debajo del título */
+
+:root:not([data-theme="dark"]) #tools .technical-card h3::after {
+  background: #2f6fa3 !important;
+}
+
+/* Etiquetas en modo claro */
+
+:root:not([data-theme="dark"]) #tools .technical-tags span {
+  border-color: rgba(47, 111, 163, 0.3) !important;
+  background: rgba(47, 111, 163, 0.07) !important;
+  color: #315f84 !important;
+}
+
+
+
+
+/* =========================================================
+   MODO CLARO — TARJETAS SIN MANCHA DE COLOR
+========================================================= */
+
+:root:not([data-theme="dark"]) #tools .technical-card {
+  background:
+    linear-gradient(
+      145deg,
+      #f7fafd 0%,
+      #ffffff 72%
+    ) !important;
+}
+
+/* Elimina cualquier decoración de color en la esquina */
+:root:not([data-theme="dark"]) #tools .technical-card::before {
+  background: none !important;
+  opacity: 0 !important;
+}
+
+
+
+/* =========================================================
+   COMPETENCIAS — MISMO FONDO QUE LAS DEMÁS SECCIONES
+   No modifica tarjetas, colores, animaciones ni contenido
+========================================================= */
+
+#tools {
+  background: var(--theme-background) !important;
+}
+
+/* Elimina la cuadrícula y los efectos decorativos del fondo */
+#tools::before,
+#tools::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  opacity: 0 !important;
+}
+
+
+
+
+

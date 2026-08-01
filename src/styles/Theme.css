@@ -1,0 +1,754 @@
+/* =========================================================
+   VARIABLES DEL TEMA
+========================================================= */
+
+:root {
+  color-scheme: light;
+
+  --theme-background: #ffffff;
+  --theme-background-soft: #f7f9fc;
+  --theme-surface: #ffffff;
+  --theme-surface-secondary: #f2f6fa;
+
+  --theme-text: #0c1729;
+  --theme-text-soft: #344054;
+  --theme-muted: #667085;
+
+  --theme-border: #d8e1eb;
+  --theme-accent: #1e5f9d;
+  --theme-accent-hover: #164d82;
+
+  --theme-navbar: rgba(255, 255, 255, 0.97);
+  --theme-navbar-text: #0c1729;
+  --theme-navbar-muted: #667085;
+  --theme-navbar-panel: #f5f7fa;
+
+  --theme-shadow:
+    0 18px 48px rgba(15, 35, 60, 0.09);
+
+  --theme-hero-overlay:
+    linear-gradient(
+      90deg,
+      rgba(248, 251, 254, 0.98) 0%,
+      rgba(248, 251, 254, 0.95) 54%,
+      rgba(238, 246, 252, 0.79) 100%
+    );
+}
+
+/* =========================================================
+   MODO OSCURO
+========================================================= */
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --theme-background: #08111f;
+  --theme-background-soft: #0d1828;
+  --theme-surface: #111e30;
+  --theme-surface-secondary: #15243a;
+
+  --theme-text: #f5f8fc;
+  --theme-text-soft: #c8d3df;
+  --theme-muted: #9caec1;
+
+  --theme-border: #293a50;
+  --theme-accent: #69a9e8;
+  --theme-accent-hover: #8bc2f4;
+
+  --theme-navbar: rgba(8, 17, 31, 0.97);
+  --theme-navbar-text: #f8fafc;
+  --theme-navbar-muted: #9aacc0;
+  --theme-navbar-panel: #111d2f;
+
+  --theme-shadow:
+    0 20px 52px rgba(0, 0, 0, 0.28);
+
+  --theme-hero-overlay:
+    linear-gradient(
+      90deg,
+      rgba(8, 17, 31, 0.98) 0%,
+      rgba(8, 17, 31, 0.95) 57%,
+      rgba(12, 28, 47, 0.88) 100%
+    );
+}
+
+/* =========================================================
+   BASE GENERAL
+========================================================= */
+
+html {
+  background: var(--theme-background);
+  color: var(--theme-text);
+}
+
+body,
+#root {
+  min-height: 100%;
+  background: var(--theme-background);
+  color: var(--theme-text);
+}
+
+body {
+  transition:
+    background-color 220ms ease,
+    color 220ms ease;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.portfolio-page {
+  background: var(--theme-background) !important;
+  color: var(--theme-text);
+}
+
+/* Todas las secciones usan el fondo del tema */
+
+.profile-section,
+.skills-section,
+.project-section,
+.certificates-section {
+  background: var(--theme-background) !important;
+}
+
+/* Transición discreta al cambiar de tema */
+
+.navbar,
+.portfolio-profile-section,
+.profile-section,
+.skills-section,
+.project-section,
+.certificates-section,
+.home-summary,
+.profile-objective,
+.profile-fact-card,
+.technical-card,
+.project-case,
+.project-case-summary,
+.project-contributions,
+.certificate-list-item,
+.certificate-preview-card,
+.certificate-document,
+.certificate-information {
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  border-bottom: 1px solid var(--theme-border);
+  background: var(--theme-navbar) !important;
+  box-shadow: 0 9px 28px rgba(15, 35, 60, 0.1);
+}
+
+.navbar-brand,
+.navbar-back-btn {
+  color: var(--theme-navbar-text) !important;
+}
+
+.navbar-brand:hover,
+.navbar-back-btn:hover {
+  color: var(--theme-accent) !important;
+}
+
+.brand-mark {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-navbar-panel) !important;
+  color: var(--theme-navbar-text) !important;
+}
+
+.navbar-segments {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-navbar-panel) !important;
+}
+
+.navbar-link {
+  color: var(--theme-navbar-muted) !important;
+}
+
+.navbar-link:hover {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-surface) !important;
+  color: var(--theme-navbar-text) !important;
+}
+
+.navbar-link.active {
+  border-color: var(--theme-accent) !important;
+  background: var(--theme-accent) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+/* Botones EN/ES y tema claro/oscuro */
+
+.language-btn,
+.theme-btn {
+  display: inline-grid;
+  place-items: center;
+
+  height: 38px;
+  padding: 0;
+
+  border: 1px solid var(--theme-border);
+  border-radius: 9px;
+
+  background: var(--theme-surface);
+  color: var(--theme-navbar-text);
+
+  cursor: pointer;
+
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.language-btn {
+  width: auto;
+  min-width: 48px;
+  padding: 0 11px;
+
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.theme-btn {
+  width: 40px;
+  min-width: 40px;
+  font-size: 0.95rem;
+}
+
+.language-btn:hover,
+.theme-btn:hover {
+  border-color: var(--theme-accent);
+  background: var(--theme-background-soft);
+  color: var(--theme-accent);
+}
+
+.language-btn:focus-visible,
+.theme-btn:focus-visible,
+.navbar-link:focus-visible,
+.menu-toggle:focus-visible {
+  outline: 3px solid
+    color-mix(in srgb, var(--theme-accent) 30%, transparent);
+  outline-offset: 2px;
+}
+
+.theme-btn-mobile {
+  display: none;
+}
+
+.menu-toggle {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-surface) !important;
+}
+
+.menu-toggle span {
+  background: var(--theme-navbar-text) !important;
+}
+
+.mobile-menu-header,
+.close-btn {
+  color: var(--theme-navbar-text) !important;
+}
+
+/* =========================================================
+   SECCIÓN INICIO
+========================================================= */
+
+.portfolio-profile-section {
+  background-color: var(--theme-background) !important;
+  color: var(--theme-text) !important;
+}
+
+.portfolio-profile-section .home-overlay {
+  background: var(--theme-hero-overlay) !important;
+}
+
+.home-copy h1,
+.home-role strong,
+.home-summary > p,
+.home-summary dd {
+  color: var(--theme-text) !important;
+}
+
+.home-description,
+.home-meta {
+  color: var(--theme-muted) !important;
+}
+
+.home-eyebrow {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-background-soft) !important;
+  color: var(--theme-accent) !important;
+}
+
+.home-role,
+.home-meta svg {
+  color: var(--theme-accent) !important;
+}
+
+.home-status {
+  color: var(--theme-muted) !important;
+}
+
+.home-status i {
+  background: #18a874 !important;
+  box-shadow:
+    0 0 0 4px rgba(24, 168, 116, 0.11);
+}
+
+/* Tarjeta lateral del décimo ciclo */
+
+.home-summary {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-surface) !important;
+  box-shadow: var(--theme-shadow) !important;
+}
+
+.summary-number {
+  color: var(--theme-accent) !important;
+}
+
+.summary-divider {
+  background: var(--theme-border) !important;
+}
+
+.home-summary dt {
+  color: var(--theme-muted) !important;
+}
+
+/* Botones del inicio */
+
+.home-button-primary {
+  border-color: var(--theme-accent) !important;
+  background: var(--theme-accent) !important;
+  color: #ffffff !important;
+}
+
+.home-button-primary:hover {
+  border-color: var(--theme-accent-hover) !important;
+  background: var(--theme-accent-hover) !important;
+}
+
+.home-button-secondary,
+.home-button-tertiary {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-surface) !important;
+  color: var(--theme-accent) !important;
+}
+
+.home-button-secondary:hover,
+.home-button-tertiary:hover {
+  border-color: var(--theme-accent) !important;
+  background: var(--theme-background-soft) !important;
+  color: var(--theme-accent-hover) !important;
+}
+
+/* =========================================================
+   CONTACTO DEBAJO DE LOS BOTONES
+
+   Sin fondo oscuro, sin bloque, sin sombra.
+   Conserva únicamente una línea separadora.
+========================================================= */
+
+.home-contact-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 28px;
+
+  width: 100%;
+  max-width: 760px;
+
+  margin-top: 28px;
+  padding-top: 20px;
+
+  border-top: 1px solid var(--theme-border);
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 0;
+
+  background: transparent !important;
+  box-shadow: none !important;
+
+  color: var(--theme-muted);
+}
+
+/* Elimina la antigua línea colocada con pseudoelemento */
+
+.home-contact-strip::before,
+.home-contact-strip::after {
+  display: none !important;
+  content: none !important;
+}
+
+.home-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin: 0;
+  padding: 0;
+
+  color: var(--theme-muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.home-contact-item svg {
+  flex: 0 0 auto;
+  color: var(--theme-accent);
+  font-size: 0.92rem;
+}
+
+a.home-contact-item {
+  transition: color 180ms ease;
+}
+
+a.home-contact-item:hover {
+  color: var(--theme-accent);
+}
+
+a.home-contact-item:focus-visible {
+  border-radius: 4px;
+  outline: 3px solid
+    color-mix(in srgb, var(--theme-accent) 28%, transparent);
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   PERFIL
+========================================================= */
+
+.section-heading h2,
+.profile-main h2,
+.section-heading--light h2 {
+  color: var(--theme-text) !important;
+}
+
+.section-heading p,
+.section-heading--light p,
+.profile-main > p {
+  color: var(--theme-muted) !important;
+}
+
+.section-kicker,
+.section-kicker--dark {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-background-soft) !important;
+  color: var(--theme-accent) !important;
+}
+
+.profile-objective,
+.profile-fact-card {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-surface) !important;
+  box-shadow: var(--theme-shadow) !important;
+}
+
+.profile-objective {
+  border-left-color: var(--theme-accent) !important;
+}
+
+.profile-objective > span,
+.profile-fact-card > span {
+  background: var(--theme-background-soft) !important;
+  color: var(--theme-accent) !important;
+}
+
+.profile-objective h3,
+.profile-fact-card h3 {
+  color: var(--theme-text) !important;
+}
+
+.profile-objective p,
+.profile-fact-card p,
+.profile-fact-card small {
+  color: var(--theme-muted) !important;
+}
+
+/* =========================================================
+   COMPETENCIAS
+========================================================= */
+
+.technical-card {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-surface) !important;
+  box-shadow: var(--theme-shadow) !important;
+}
+
+.technical-card h3 {
+  color: var(--theme-text) !important;
+}
+
+.technical-card p,
+.technical-number {
+  color: var(--theme-muted) !important;
+}
+
+.technical-icon {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-background-soft) !important;
+  color: var(--theme-accent) !important;
+}
+
+.technical-tags span {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-background-soft) !important;
+  color: var(--theme-text-soft) !important;
+}
+
+/* =========================================================
+   PROYECTO
+========================================================= */
+
+.project-case {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-surface) !important;
+  box-shadow: var(--theme-shadow) !important;
+}
+
+.project-case-summary,
+.project-contributions {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-surface) !important;
+}
+
+.project-case-summary h3,
+.project-contributions-header h3 {
+  color: var(--theme-text) !important;
+}
+
+.project-stack {
+  color: var(--theme-accent) !important;
+}
+
+.project-intro,
+.project-contributions li p,
+.project-case-actions small {
+  color: var(--theme-muted) !important;
+}
+
+.project-case-meta span,
+.project-metric {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-background-soft) !important;
+  color: var(--theme-text-soft) !important;
+}
+
+.project-metric strong {
+  color: var(--theme-text) !important;
+}
+
+.project-metric span {
+  color: var(--theme-muted) !important;
+}
+
+.project-contributions li {
+  border-color: var(--theme-border) !important;
+}
+
+.project-contributions li > span {
+  background: var(--theme-background-soft) !important;
+  color: var(--theme-accent) !important;
+}
+
+.project-state {
+  border-color: rgba(24, 168, 116, 0.25) !important;
+  background: rgba(24, 168, 116, 0.1) !important;
+  color: #12805a !important;
+}
+
+:root[data-theme="dark"] .project-state {
+  color: #68d7ae !important;
+}
+
+/* =========================================================
+   CERTIFICADOS
+========================================================= */
+
+.certificate-list-item,
+.certificate-preview-card,
+.certificate-document,
+.certificate-information {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-surface) !important;
+}
+
+.certificate-preview-card {
+  box-shadow: var(--theme-shadow) !important;
+}
+
+.certificate-document {
+  background: var(--theme-background-soft) !important;
+}
+
+.certificate-document img {
+  border-color: var(--theme-border) !important;
+}
+
+.certificate-list-copy strong,
+.certificate-information h3 {
+  color: var(--theme-text) !important;
+}
+
+.certificate-list-copy small,
+.certificate-information dd,
+.certificate-count {
+  color: var(--theme-muted) !important;
+}
+
+.certificate-list-item:hover {
+  border-color: var(--theme-accent) !important;
+  background: var(--theme-background-soft) !important;
+}
+
+.certificate-list-item.active {
+  border-color: var(--theme-accent) !important;
+  background: var(--theme-background-soft) !important;
+}
+
+.certificate-information {
+  border-color: var(--theme-border) !important;
+}
+
+.certificate-information dl div {
+  border-color: var(--theme-border) !important;
+}
+
+.button-secondary--light {
+  border-color: var(--theme-border) !important;
+  background: transparent !important;
+  color: var(--theme-text) !important;
+}
+
+.button-secondary--light:hover {
+  border-color: var(--theme-accent) !important;
+  background: var(--theme-background-soft) !important;
+  color: var(--theme-accent) !important;
+}
+
+.certificate-nav-buttons button {
+  border-color: var(--theme-border) !important;
+  background: var(--theme-background-soft) !important;
+  color: var(--theme-text) !important;
+}
+
+.certificate-nav-buttons button:hover {
+  border-color: var(--theme-accent) !important;
+  color: var(--theme-accent) !important;
+}
+
+/* =========================================================
+   FOOTER, EN CASO DE QUE TODAVÍA EXISTA
+========================================================= */
+
+.portfolio-footer {
+  border-top-color: var(--theme-border) !important;
+  background: var(--theme-background) !important;
+  color: var(--theme-muted) !important;
+}
+
+.portfolio-footer a {
+  color: var(--theme-muted) !important;
+}
+
+.portfolio-footer a:hover {
+  color: var(--theme-accent) !important;
+}
+
+/* =========================================================
+   MODO OSCURO: AJUSTES ESPECÍFICOS
+========================================================= */
+
+:root[data-theme="dark"] .portfolio-profile-section {
+  background-color: var(--theme-background) !important;
+}
+
+:root[data-theme="dark"] .portfolio-profile-section::before {
+  opacity: 0.13;
+}
+
+:root[data-theme="dark"] .home-copy h1 {
+  color: #f7f9fc !important;
+}
+
+:root[data-theme="dark"] .home-description {
+  color: #b8c6d6 !important;
+}
+
+:root[data-theme="dark"] .home-contact-strip {
+  background: transparent !important;
+  border-top-color: #293a50 !important;
+  box-shadow: none !important;
+}
+
+:root[data-theme="dark"] .home-contact-item {
+  color: #aab9c9;
+}
+
+:root[data-theme="dark"] a.home-contact-item:hover {
+  color: #8bc2f4;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .navbar-right {
+    background: var(--theme-background) !important;
+  }
+
+  .theme-btn-mobile {
+    display: inline-grid;
+  }
+
+  .theme-btn-desktop {
+    display: none;
+  }
+
+  .navbar-link {
+    border-color: var(--theme-border) !important;
+    background: var(--theme-surface) !important;
+  }
+
+  .navbar-link.active {
+    border-color: var(--theme-accent) !important;
+    background: var(--theme-accent) !important;
+    color: #ffffff !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-contact-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+
+    margin-top: 23px;
+    padding-top: 18px;
+  }
+
+  .home-contact-item {
+    width: 100%;
+  }
+}
+
+
+
