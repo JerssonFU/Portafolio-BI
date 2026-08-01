@@ -1,0 +1,225 @@
+@media (max-width: 1100px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .split-section,
+  .split-section.reverse,
+  .sarimax-row {
+    flex-direction: column;
+  }
+
+  .intro-etl-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro-dashboard-frame {
+    height: 500px;
+  }
+
+  .sarimax-main,
+  .sarimax-side {
+    flex: 1;
+    width: 100%;
+  }
+
+  .final-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .parking-section {
+    min-height: auto;
+    padding: 75px 7%;
+  }
+
+  .summary-detail-active {
+    padding-top: 18px !important;
+  }
+
+  .hero-section {
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.7rem;
+  }
+
+  .hero-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-panel {
+    padding: 24px;
+  }
+
+  .objectives-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-full-view {
+    padding: 24px;
+  }
+
+  .dashboard-view {
+    min-height: auto;
+  }
+
+  .intro-view-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .dashboard-view .intro-view-header h2 {
+    font-size: 1.55rem;
+  }
+
+  .dashboard-view .intro-view-header p {
+    font-size: 0.88rem;
+  }
+
+  .intro-etl-list {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-dashboard-frame {
+    height: 420px;
+  }
+
+  .section-header h2,
+  .text-block h2,
+  .final-summary-header h2 {
+    font-size: 2rem;
+  }
+
+  .etl-nav.left {
+    left: 10px;
+  }
+
+  .etl-nav.right {
+    right: 10px;
+  }
+
+  .etl-nav {
+    font-size: 3rem;
+  }
+
+  .etl-counter {
+    right: 68px;
+  }
+}
+
+@media (max-width: 600px) {
+  .final-summary-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .mini-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .final-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.25rem;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .image-panel img,
+  .sarimax-main img,
+  .sarimax-side img {
+    padding: 12px;
+  }
+
+  .intro-dashboard-frame {
+    height: 360px;
+  }
+}
+
+@media (max-height: 760px) {
+  .dashboard-view {
+    padding-top: 18px;
+    padding-bottom: 22px;
+  }
+
+  .dashboard-view .intro-view-header {
+    margin-bottom: 12px;
+  }
+
+  .dashboard-view .intro-view-header h2 {
+    font-size: 1.65rem;
+    margin-bottom: 6px;
+  }
+
+  .dashboard-view .intro-view-header p {
+    font-size: 0.86rem;
+    line-height: 1.4;
+  }
+
+  .dashboard-view .back-to-summary-btn {
+    margin-bottom: 6px;
+    padding: 7px 13px;
+    font-size: 0.86rem;
+  }
+
+  .dashboard-view .section-badge {
+    margin-bottom: 8px;
+  }
+
+  .intro-dashboard-frame {
+    height: calc(100vh - 315px);
+    min-height: 350px;
+    max-height: 450px;
+  }
+
+  .intro-full-view-dark {
+    padding-top: 36px;
+    padding-bottom: 32px;
+  }
+
+  .intro-full-view-dark .intro-view-header {
+    margin-bottom: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-meta-row {
+    gap: 6px;
+  }
+
+  .case-meta-row span {
+    font-size: 0.66rem;
+  }
+}

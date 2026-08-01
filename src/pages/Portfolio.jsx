@@ -24,9 +24,9 @@ import {
 } from "react-icons/fa";
 import { SiPython } from "react-icons/si";
 import { scrollToSection } from "../utils/scrollToSection";
-import "../styles/ProfileHero.css";
-import "../styles/Portfolio.css";
-import "../styles/PremiumSections.css";
+import "../styles/base/InicioYPerfil.css";
+import "../styles/base/EstructuraGeneral.css";
+import "../styles/base/SeccionesContenido.css";
 
 const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`;
 

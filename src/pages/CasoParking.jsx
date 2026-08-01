@@ -1,4 +1,5 @@
-import "../projectstyles/CasoParking.css";
+import "../projectstyles/base/CasoParkingBase.css";
+import "../projectstyles/responsive/CasoParkingResponsive.css";
 import { useCallback, useEffect, useState } from "react";
 
 const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`;

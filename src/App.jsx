@@ -2,8 +2,10 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Portfolio from "./pages/Portfolio";
 import CasoParking from "./pages/CasoParking";
-import "./styles/Theme.css";
-import "./styles/ResponsiveLayout.css";
+import "./styles/base/TemaVisual.css";
+import "./styles/base/AjustesVisuales.css";
+import "./styles/responsive/AjustesResponsiveOriginales.css";
+import "./styles/responsive/VistaMovilSecciones.css";
 
 function App() {
   return (
