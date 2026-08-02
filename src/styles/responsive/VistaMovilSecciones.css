@@ -1764,3 +1764,426 @@
 
 
 
+
+/* Perfil móvil: aumentar ligeramente los textos pequeños */
+@media (max-width: 700px) {
+  /* Etiqueta “Perfil profesional” */
+  #profile .section-eyebrow,
+  #profile .profile-eyebrow {
+    font-size: 0.66rem !important;
+    line-height: 1.2 !important;
+    padding: 5px 9px !important;
+  }
+
+  /* Descripción debajo del título principal */
+  #profile .profile-main > p {
+    font-size: 0.72rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Título “Objetivo profesional” */
+  #profile .profile-objective h3,
+  #profile .profile-objective strong {
+    font-size: 0.75rem !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Descripción del objetivo profesional */
+  #profile .profile-objective p {
+    font-size: 0.66rem !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Etiquetas: Educación, Idiomas y Disponible para prácticas */
+  #profile .profile-fact-card dt,
+  #profile .profile-fact-card .profile-fact-label {
+    font-size: 0.58rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Universidad, Español · Nativo, etc. */
+  #profile .profile-fact-card dd,
+  #profile .profile-fact-card strong {
+    font-size: 0.68rem !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Información secundaria de las tarjetas */
+  #profile .profile-fact-card p,
+  #profile .profile-fact-card span {
+    font-size: 0.61rem !important;
+    line-height: 1.35 !important;
+  }
+}
+
+
+
+
+
+
+
+/* Inicio móvil: aumentar ligeramente los textos pequeños */
+@media (max-width: 700px) {
+  /* Etiqueta “Portafolio profesional” */
+  #home .home-eyebrow {
+    font-size: 0.66rem !important;
+    line-height: 1.2 !important;
+    padding: 5px 9px !important;
+  }
+
+  /* Practicante preprofesional y tecnologías */
+  #home .home-role {
+    font-size: 0.76rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Descripción principal */
+  #home .home-description {
+    font-size: 0.7rem !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Disponible para prácticas */
+  #home .home-meta {
+    font-size: 0.7rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Botones Proyecto, Descargar CV y Contáctame */
+  #home .home-button {
+    font-size: 0.68rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Lima, correo y LinkedIn */
+  #home .home-contact-item {
+    font-size: 0.62rem !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Texto al lado del 10.º */
+  #home .home-summary > p {
+    font-size: 0.68rem !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Etiquetas Enfoque y Proyecto destacado */
+  #home .home-summary dt {
+    font-size: 0.55rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Datos inferiores de la tarjeta */
+  #home .home-summary dd {
+    font-size: 0.62rem !important;
+    line-height: 1.3 !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Proyecto móvil: mostrar los 4 procesos sin agrandar demasiado */
+@media (max-width: 700px) {
+  #projects .project-case {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    grid-template-rows: auto auto !important;
+    overflow: hidden !important;
+  }
+
+  #projects .project-contributions {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    padding: 9px 14px 11px !important;
+    overflow: visible !important;
+  }
+
+  #projects .project-contributions-header {
+    margin-bottom: 3px !important;
+  }
+
+  #projects .project-contributions ol {
+    display: grid !important;
+    grid-template-rows: repeat(4, auto) !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Fuerza la visualización de los cuatro procesos */
+  #projects .project-contributions li,
+  #projects .project-contributions li:nth-child(n) {
+    display: grid !important;
+    grid-template-columns: 20px minmax(0, 1fr) !important;
+
+    min-height: 0 !important;
+    gap: 6px !important;
+    padding: 4px 0 !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  #projects .project-contributions li > span {
+    font-size: 0.53rem !important;
+    line-height: 1.25 !important;
+  }
+
+  #projects .project-contributions li p {
+    margin: 0 !important;
+
+    font-size: 0.55rem !important;
+    line-height: 1.28 !important;
+
+    white-space: normal !important;
+    overflow: visible !important;
+  }
+}
+
+
+
+
+
+
+
+
+/* Proyecto móvil: textos pequeños un poco más grandes */
+@media (max-width: 700px) {
+  /* Etiqueta “Proyecto académico destacado” */
+  #projects .section-eyebrow {
+    font-size: 0.67rem !important;
+    line-height: 1.2 !important;
+    padding: 5px 9px !important;
+  }
+
+  /* Etiquetas superiores de la tarjeta */
+  #projects .project-case-meta span {
+    font-size: 0.6rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Tecnologías */
+  #projects .project-stack {
+    font-size: 0.68rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Descripción principal */
+  #projects .project-intro {
+    font-size: 0.66rem !important;
+    line-height: 1.48 !important;
+  }
+
+  /* Números de las métricas */
+  #projects .project-metric strong {
+    font-size: 0.84rem !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Texto inferior de las métricas */
+  #projects .project-metric span {
+    font-size: 0.53rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Botón “Explorar el caso completo” */
+  #projects .project-case-actions .button-primary {
+    font-size: 0.65rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Estado “Proyecto completado” */
+  #projects .project-state {
+    font-size: 0.59rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Título “Contribuciones principales” */
+  #projects .project-contributions-header h3 {
+    font-size: 0.75rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Números 01, 02, 03 y 04 */
+  #projects .project-contributions li > span {
+    font-size: 0.58rem !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Descripción de los cuatro procesos */
+  #projects .project-contributions li p {
+    font-size: 0.6rem !important;
+    line-height: 1.32 !important;
+  }
+}
+
+
+
+
+
+
+
+/* Certificados móvil: imagen más alta y textos pequeños más grandes */
+@media (max-width: 700px) {
+  /* Caja visual del certificado */
+  #certificates .certificates-showcase-visual {
+    width: 90% !important;
+    margin-inline: auto !important;
+  }
+
+  /* Imagen más alta, menos horizontal */
+  #certificates .certificates-showcase-preview {
+    height: 165px !important;
+    min-height: 165px !important;
+    padding: 8px !important;
+  }
+
+  #certificates .certificates-showcase-preview img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  /* Etiqueta superior */
+  #certificates .section-eyebrow {
+    font-size: 0.67rem !important;
+    line-height: 1.2 !important;
+    padding: 5px 9px !important;
+  }
+
+  /* Descripción debajo del título */
+  #certificates .section-heading p {
+    font-size: 0.74rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* 01 / 04 */
+  #certificates .certificates-showcase-count {
+    font-size: 0.6rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* CREDENCIAL */
+  #certificates .certificates-showcase-label {
+    font-size: 0.58rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Power BI Intensivo */
+  #certificates .certificates-showcase-details h3 {
+    font-size: 1.28rem !important;
+    line-height: 1.08 !important;
+  }
+
+  /* INSTITUCIÓN / DETALLE */
+  #certificates .certificates-showcase-metadata dt {
+    font-size: 0.56rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* IDAT / Formación en Power BI... */
+  #certificates .certificates-showcase-metadata dd {
+    font-size: 0.64rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Botón Abrir certificado */
+  #certificates .certificates-showcase-open {
+    font-size: 0.62rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Flechas */
+  #certificates .certificates-showcase-controls > button {
+    width: 36px !important;
+    min-width: 36px !important;
+    height: 36px !important;
+    min-height: 36px !important;
+  }
+}
+
+
+
+/* Certificados móvil: descripción forzada visualmente a 2 líneas */
+@media (max-width: 700px) {
+  #certificates .section-heading {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  #certificates .section-heading p {
+    width: calc(100vw - 44px) !important;
+    max-width: 360px !important;
+    margin: 8px auto 0 !important;
+
+    font-size: 0 !important;
+    line-height: 0 !important;
+    text-align: center !important;
+  }
+
+  #certificates .section-heading p::before {
+    content:
+      "Credenciales vinculadas directamente con el perfil presentado en mi CV:\\A"
+      "Power BI, Excel, tablas dinámicas y DAX.";
+
+    display: block !important;
+    white-space: pre-line !important;
+
+    font-size: clamp(0.56rem, 1.65vw, 0.64rem) !important;
+    line-height: 1.35 !important;
+    letter-spacing: -0.01em !important;
+
+    color: var(--theme-text-muted) !important;
+  }
+}
+
+
+
+/* Certificados móvil: texto descriptivo más grande y contenido más arriba */
+@media (max-width: 700px) {
+  /* Sube ligeramente todo el apartado */
+  #certificates > [data-section-content] {
+    position: relative !important;
+    top: 5px !important;
+  }
+
+  /* Cierra espacios entre título, descripción e imagen */
+  #certificates .section-heading {
+    margin-bottom: 10px !important;
+  }
+
+  #certificates .section-heading h2 {
+    margin-bottom: 6px !important;
+  }
+
+  /* Las dos líneas descriptivas */
+  #certificates .section-heading p::before {
+    font-size: clamp(0.62rem, 1.9vw, 0.7rem) !important;
+    line-height: 1.35 !important;
+    font-weight: 500 !important;
+  }
+
+  /* Acerca la tarjeta del certificado al encabezado */
+  #certificates .certificates-showcase-content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+}
