@@ -1,6 +1,14 @@
 import "../projectstyles/base/CasoParkingBase.css";
 import "../projectstyles/responsive/CasoParkingResponsive.css";
-import { useCallback, useEffect, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
+
+import { jumpToScrollPosition } from "../utils/scrollToSection";
 
 const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`;
 
@@ -281,8 +289,26 @@ export default function CasoParking() {
     };
   }, []);
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0 });
+  const scrollRestoredRef = useRef(false);
+
+  useLayoutEffect(() => {
+    // En recargas y navegación del historial se conserva la restauración
+    // nativa del navegador. Solo una entrada desde el botón del portafolio
+    // fuerza el inicio de Caso Parking.
+    if (scrollRestoredRef.current) return;
+    scrollRestoredRef.current = true;
+
+    const cameFromPortfolio =
+      sessionStorage.getItem("caseParkingNavigation") ===
+      "fromPortfolio";
+
+    if (cameFromPortfolio) {
+      sessionStorage.removeItem("caseParkingNavigation");
+      jumpToScrollPosition(0, 0, { settleFrames: 6 });
+      return;
+    }
+
+    window.history.scrollRestoration = "auto";
   }, []);
 
   useEffect(() => {

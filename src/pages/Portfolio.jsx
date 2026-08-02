@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   FaArrowRight,
@@ -23,7 +23,10 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { SiPython } from "react-icons/si";
-import { scrollToSection } from "../utils/scrollToSection";
+import {
+  prepareInstantRouteScroll,
+  scrollToSection,
+} from "../utils/scrollToSection";
 import "../styles/base/InicioYPerfil.css";
 import "../styles/base/EstructuraGeneral.css";
 import "../styles/base/SeccionesContenido.css";
@@ -301,18 +304,22 @@ function Portfolio() {
       window.removeEventListener("languageChange", handleLanguageChange);
   }, []);
 
-  useEffect(() => {
+  const scrollRestoredRef = useRef(false);
+
+  useLayoutEffect(() => {
+    // En una recarga normal no se toca el scroll: Chrome restaura de forma
+    // nativa la posición exacta y evita el desplazamiento acumulativo.
+    if (scrollRestoredRef.current) return;
+    scrollRestoredRef.current = true;
+
+    window.history.scrollRestoration = "auto";
+
     const requestedSection = localStorage.getItem("goToSection");
 
     if (requestedSection) {
-      window.setTimeout(() => {
-        scrollToSection(requestedSection, { behavior: "auto" });
-      }, 80);
       localStorage.removeItem("goToSection");
-      return;
+      scrollToSection(requestedSection, { behavior: "instant" });
     }
-
-    window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
 
   useEffect(() => {
@@ -574,7 +581,17 @@ function Portfolio() {
                 </div>
 
                 <div className="project-case-actions">
-                  <Link to="/caso-parking" className="button-primary">
+                  <Link
+                    to="/caso-parking"
+                    className="button-primary"
+                    onClick={() => {
+                      prepareInstantRouteScroll();
+                      sessionStorage.setItem(
+                        "caseParkingNavigation",
+                        "fromPortfolio",
+                      );
+                    }}
+                  >
                     {content.exploreProject}
                     <FaArrowRight aria-hidden="true" />
                   </Link>
